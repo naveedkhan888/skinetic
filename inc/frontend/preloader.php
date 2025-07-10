@@ -49,7 +49,7 @@ function preloader_customize_settings() {
             'type'     => 'slider',
             'label'    => esc_html__( 'Logo Width', 'xconnect' ),
             'section'  => 'preload_section',
-            'default'  => 124,
+            'default'  => 180,
             'priority' => 12,
             'choices'   => array(
                 'min'  => 0,

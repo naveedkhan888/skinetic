@@ -136,7 +136,7 @@ function xconnect_fonts_url() {
 	}
 
 	if ( !isset( $second_font['font-family'] ) || $second_font['font-family'] == '' ) {
-		$font_families[] = 'DM Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
+		$font_families[] = 'Marcellus:400';
 	}
 
 	if ( $font_families ) {

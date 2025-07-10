@@ -1360,12 +1360,22 @@ a:hover, a:active {
 .main-navigation ul {
   font-family: "Marcellus", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   list-style: none;
   margin: 0px 0px;
   padding: 0px 0px;
 }
 
+.main-navigation ul ul.sub-menu.sub-mega-menu {
+  min-width: 380px;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+}
+
+.qodef-qi-text-marquee .qodef-m-text-item {
+  font-family: "Marcellus", sans-serif;
+}
 .main-navigation > ul {
   position: relative;
   display: flex;

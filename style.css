@@ -360,7 +360,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 20px;
@@ -428,7 +428,7 @@ dfn, cite, em, i {
 blockquote {
   position: relative;
   margin: 30px 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #1a1b1e;
@@ -521,7 +521,7 @@ mark, ins {
 }
 
 .font-second {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 
 .clear-both {
@@ -636,7 +636,7 @@ mark, ins {
 
 .link-details {
   display: inline-block;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -774,7 +774,7 @@ mark, ins {
 }
 
 .slide-rev-subtitle {
-  font-family: "DM Sans", sans-serif !important;
+  font-family: "Marcellus", sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
   line-height: 30px !important;
@@ -976,7 +976,7 @@ td {
   text-transform: uppercase;
   white-space: nowrap;
   vertical-align: middle;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   text-align: center;
   background: #0f3d3a;
@@ -1152,7 +1152,7 @@ textarea:focus {
 }
 
 select {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 14px;
   border: 1px solid #dbdbdb;
   outline: none;
@@ -1358,7 +1358,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   font-size: 14px;
   list-style: none;
@@ -2055,7 +2055,7 @@ Vertical Menu
 .page-header {
   width: 100%;
   height: 300px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 700;
   background: #1a1b1e center center no-repeat;
   background-size: cover;
@@ -2286,7 +2286,7 @@ Vertical Menu
   margin-bottom: 25px;
 }
 .post-box .post-cat a {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 700;
@@ -2307,7 +2307,7 @@ Vertical Menu
 .post-box .entry-meta {
   position: relative;
   text-transform: uppercase;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   font-size: 13px;
   color: #818181;
@@ -2386,7 +2386,7 @@ Vertical Menu
 .post-box .link-box a {
   font-size: 22px;
   font-weight: 600;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   color: #1a1b1e;
 }
 .post-box .link-box a:hover {
@@ -2417,7 +2417,7 @@ Vertical Menu
   padding-left: 52px;
   font-size: 20px;
   font-weight: 500;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   line-height: 36px;
   color: #191717;
 }
@@ -2473,7 +2473,7 @@ Vertical Menu
   display: inline-block;
 }
 .page-pagination li a, .page-pagination li span {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 16px;
   color: #1a1b1e;
   background: #fff;
@@ -2538,7 +2538,7 @@ Vertical Menu
   color: #717171;
   background: #f5f5f5;
   font-size: 12px !important;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   padding: 8px 12px;
@@ -2655,7 +2655,7 @@ Vertical Menu
 }
 
 .drop-cap {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   float: left;
   text-align: center;
   background: #1a1b1e;
@@ -2677,7 +2677,7 @@ Vertical Menu
 }
 
 .post-nav {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   margin-bottom: 30px;
   overflow: hidden;
   padding-bottom: 5px;
@@ -3032,7 +3032,7 @@ Vertical Menu
 .comments-area .comment-item .comment-meta .comment-time {
   display: block;
   color: #bdbdbd;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3043,7 +3043,7 @@ Vertical Menu
   position: absolute;
   top: 0;
   right: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -3123,7 +3123,7 @@ Vertical Menu
   margin-bottom: 36px;
 }
 .comment-form .logged-in-as {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 14px;
   margin-bottom: 35px;
 }
@@ -3171,7 +3171,7 @@ Vertical Menu
   color: #717171;
   background: #f5f5f5;
   font-size: 12px !important;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   padding: 8px 12px;
@@ -3191,7 +3191,7 @@ Vertical Menu
   border-color: #0f3d3a;
 }
 .widget table {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 .widget table td#today {
   font-weight: 600;
@@ -3347,7 +3347,7 @@ Vertical Menu
   font-weight: 500;
 }
 .widget .recent-news .post-on {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 13px;
   font-weight: 600;
   display: block;
@@ -3613,7 +3613,7 @@ object {
 ## Heading
 --------------------------------------------------------------*/
 .xp-heading {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 .xp-heading > span {
   position: relative;
@@ -4384,7 +4384,7 @@ object {
   line-height: 42px;
 }
 .xp-flip-box .number-title span {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 24px;
 }
 .xp-flip-box .number-title span:before {
@@ -4463,11 +4463,11 @@ object {
 ## Counter
 --------------------------------------------------------------*/
 .xp-counter {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   display: block;
 }
 .xp-counter span {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 700;
   font-size: 48px;
   color: #0f3d3a;
@@ -4554,7 +4554,7 @@ object {
 }
 .xp-countdown li span {
   font-size: 100px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 800;
   display: block;
   margin-bottom: 18px;
@@ -4648,7 +4648,7 @@ object {
   padding: 4px 5px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   line-height: 1;
   background: #262832;
   color: #fff;
@@ -5064,7 +5064,7 @@ object {
 .project_filters li a {
   font-size: 14px;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   text-transform: uppercase;
 }
 .project_filters li a:before {
@@ -5226,7 +5226,7 @@ object {
 }
 .projects-grid .projects-box .portfolio-info .portfolio-cates {
   color: #fff;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
@@ -5515,7 +5515,7 @@ object {
 }
 .project-slider .projects-box .portfolio-info .portfolio-cates {
   color: #e9e9e9;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
@@ -5818,7 +5818,7 @@ object {
   font-weight: 600;
 }
 .xp-team .team-info span {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -6071,7 +6071,7 @@ object {
 }
 .member-info li span {
   color: #1a1b1e;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
 }
 
@@ -6109,7 +6109,7 @@ object {
   cursor: pointer;
   justify-content: space-between;
   overflow: hidden;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #1a1b1e;
@@ -6161,7 +6161,7 @@ object {
 }
 .xp-tabs .tab-link {
   cursor: pointer;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 14px;
   font-weight: 600;
   min-width: 170px;
@@ -6228,7 +6228,7 @@ object {
 ## Testimonials
 --------------------------------------------------------------*/
 .xp-testimonials .t-head {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 .xp-testimonials .t-head h6 {
   font-size: 22px;
@@ -6925,7 +6925,7 @@ object {
   flex-grow: 1;
 }
 .features-service-wrapper .features-service-item .features-service-content {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -7169,7 +7169,7 @@ body .elementor-widget:not(:last-child) {
 div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   color: #1a1b1e;
   font-weight: 700;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   line-height: 1.2;
 }
 
@@ -7210,7 +7210,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .elementor-element .elementor-widget-button .elementor-button {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 600;
   font-size: 13px;
   line-height: 1;
@@ -7235,7 +7235,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   margin-bottom: 0;
 }
 .elementor-default .elementor-widget-text-editor .elementor-drop-cap {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-size: 20px;
   font-weight: 900;
   padding: 10px 13px;
@@ -7616,14 +7616,14 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   margin: 0 7px;
   font-size: 14px;
   font-weight: 500;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 
 #lang_choice_wp-widget-polylang {
   border: none;
   background: transparent;
   font-size: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   padding: 2px 10px 2px 0;
@@ -7705,7 +7705,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .mmenu-wrapper .mobile_mainmenu {
   margin: 0;
   padding: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
 }
 .mmenu-wrapper .mobile-nav {
   min-width: 240px;
@@ -8199,7 +8199,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Marcellus", sans-serif;
   background-color: var(--primary);
   width: 100%;
   direction: ltr;

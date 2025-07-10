@@ -327,7 +327,7 @@ if(!function_exists('xconnect_second_font')){
 		$second_font = xconnect_get_option( 'second_font', [] );
 		$data_font = '';
 
-		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'DM Sans' ) {
+		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'Marcellus' ) {
 			$data_font = 
 			'h1, h2, h3, h4, h5, h6,
 			blockquote,

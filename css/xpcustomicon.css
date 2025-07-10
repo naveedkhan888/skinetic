@@ -1,0 +1,110 @@
+	/*
+  	xpcustomicon icon font: xpcustomicon
+  	Creation date: 02/06/2020 23:39
+  	*/
+
+@font-face {
+  font-family: "xpcustomicon";
+  src: url("../fonts/xpcustomicon.eot");
+  src: url("../fonts/xpcustomicon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/xpcustomicon.woff2") format("woff2"),
+       url("../fonts/xpcustomicon.woff") format("woff"),
+       url("../fonts/xpcustomicon.ttf") format("truetype"),
+       url("../fonts/xpcustomicon.svg#xpcustomicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "xpcustomicon";
+    src: url("../fonts/xpcustomicon.svg#xpcustomicon") format("svg");
+  }
+}
+
+[class^="xp-webicon-"]:before, [class*=" xp-webicon-"]:before,
+[class^="xp-webicon-"]:after, [class*=" xp-webicon-"]:after {   
+  font-family: xpcustomicon;
+  font-style: normal;
+}
+
+.xp-webicon-download:before { content: "\f100"; }
+.xp-webicon-search:before { content: "\f101"; }
+.xp-webicon-menu:before { content: "\f102"; }
+.xp-webicon-left-arrow:before { content: "\f103"; }
+.xp-webicon-play:before { content: "\f104"; }
+.xp-webicon-icon-121954:before { content: "\f105"; }
+.xp-webicon-phone-call:before { content: "\f106"; }
+.xp-webicon-placeholder:before { content: "\f107"; }
+.xp-webicon-check:before { content: "\f108"; }
+.xp-webicon-call:before { content: "\f109"; }
+.xp-webicon-right-arrow:before { content: "\f10a"; }
+.xp-webicon-up-arrow:before { content: "\f10b"; }
+.xp-webicon-send:before { content: "\f10c"; }
+.xp-webicon-pin:before { content: "\f10d"; }
+.xp-webicon-search-1:before { content: "\f10e"; }
+.xp-webicon-effort:before { content: "\f10f"; }
+.xp-webicon-task:before { content: "\f110"; }
+.xp-webicon-target:before { content: "\f111"; }
+.xp-webicon-strategy:before { content: "\f112"; }
+.xp-webicon-arrows:before { content: "\f113"; }
+.xp-webicon-arrows-1:before { content: "\f114"; }
+.xp-webicon-business-and-finance:before { content: "\f115"; }
+.xp-webicon-trajectory:before { content: "\f116"; }
+.xp-webicon-business-and-finance-1:before { content: "\f117"; }
+.xp-webicon-arrowsoutline:before { content: "\f118"; }
+.xp-webicon-card:before { content: "\f119"; }
+.xp-webicon-holidays:before { content: "\f11a"; }
+.xp-webicon-energy:before { content: "\f11b"; }
+.xp-webicon-award:before { content: "\f11c"; }
+.xp-webicon-badge:before { content: "\f11d"; }
+.xp-webicon-bars-chart:before { content: "\f11e"; }
+.xp-webicon-rocket:before { content: "\f11f"; }
+.xp-webicon-left-quote:before { content: "\f120"; }
+.xp-webicon-signs:before { content: "\f121"; }
+.xp-webicon-aim:before { content: "\f122"; }
+.xp-webicon-chart:before { content: "\f123"; }
+.xp-webicon-clock:before { content: "\f124"; }
+.xp-webicon-money:before { content: "\f125"; }
+.xp-webicon-interface:before { content: "\f126"; }
+.xp-webicon-symbol:before { content: "\f127"; }
+.xp-webicon-portfolio:before { content: "\f128"; }
+.xp-webicon-deal:before { content: "\f129"; }
+.xp-webicon-business:before { content: "\f12a"; }
+.xp-webicon-precious-stone:before { content: "\f12b"; }
+.xp-webicon-hourglass:before { content: "\f12c"; }
+.xp-webicon-certificate:before { content: "\f12d"; }
+.xp-webicon-arrows-2:before { content: "\f12e"; }
+.xp-webicon-share:before { content: "\f12f"; }
+.xp-webicon-files-1:before { content: "\f130"; }
+.xp-webicon-signs-1:before { content: "\f131"; }
+.xp-webicon-multimedia:before { content: "\f132"; }
+.xp-webicon-shapes-and-symbols:before { content: "\f133"; }
+.xp-webicon-like:before { content: "\f134"; }
+.xp-webicon-close:before { content: "\f135"; }
+.xp-webicon-document:before { content: "\f136"; }
+.xp-webicon-star:before { content: "\f137"; }
+.xp-webicon-null:before { content: "\f138"; }
+.xp-webicon-null-1:before { content: "\f139"; }
+.xp-webicon-null-2:before { content: "\f13a"; }
+.xp-webicon-null-3:before { content: "\f13b"; }
+.xp-webicon-tablet:before { content: "\f13c"; }
+.xp-webicon-illustration:before { content: "\f13d"; }
+.xp-webicon-search-2:before { content: "\f13e"; }
+.xp-webicon-paint:before { content: "\f13f"; }
+.xp-webicon-adjust:before { content: "\f140"; }
+.xp-webicon-vision:before { content: "\f141"; }
+.xp-webicon-cancel:before { content: "\f142"; }
+.xp-webicon-next:before { content: "\f143"; }
+.xp-webicon-arrow-pointing-to-left:before { content: "\f144"; }
+.xp-webicon-left-arrow-2:before { content: "\f145"; }
+.xp-webicon-facebook:before { content: "\f146"; }
+.xp-webicon-instagram:before { content: "\f147"; }
+.xp-webicon-twitter:before { content: "\f148"; }
+.xp-webicon-linkedin:before { content: "\f149"; }
+.xp-webicon-pinterest:before { content: "\f14a"; }
+.xp-webicon-google-plus:before { content: "\f14b"; }
+.xp-webicon-dribble:before { content: "\f14c"; }
+.xp-webicon-behance:before { content: "\f14d"; }
+.xp-webicon-youtube:before { content: "\f14e"; }
+.xp-webicon-refresh:before { content: "\f14f"; }

@@ -41,6 +41,7 @@ get_header(); ?>
 					?>
 
 				</main><!-- #main -->
+				<?php xconnect_posts_navigation(); ?>
 			</div><!-- #primary -->
 			<?php get_sidebar(); ?>
 		</div>

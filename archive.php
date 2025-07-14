@@ -31,7 +31,7 @@ get_header(); ?>
 
 					endwhile;
 
-						xconnect_posts_navigation();
+						//xconnect_posts_navigation();
 
 					else :
 

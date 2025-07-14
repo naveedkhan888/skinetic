@@ -164,7 +164,7 @@ if ( ! function_exists( 'xconnect_posts_navigation' ) ) :
             'mid_size'      => 3
         );
         $return =  paginate_links( $pagination );
-        echo str_replace( "<ul class='page-numbers'>", '<ul class="page-pagination none-style sdfsdf">', $return );
+        echo str_replace( "<ul class='page-numbers'>", '<ul class="page-pagination none-style">', $return );
     }
 endif;
 

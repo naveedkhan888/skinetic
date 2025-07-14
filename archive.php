@@ -1,4 +1,6 @@
 <?php
+
+die();
 /**
  * The template for displaying archive pages
  *

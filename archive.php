@@ -1,6 +1,4 @@
 <?php
-
-die();
 /**
  * The template for displaying archive pages
  *
@@ -11,7 +9,7 @@ die();
 
 get_header(); ?>
 
-<div class="entry-content">
+<div class="entry-content sdfsdf">
 	<div class="container">
 		<div class="row">
 			<div id="primary" class="content-area <?php xconnect_content_columns(); ?>">

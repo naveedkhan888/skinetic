@@ -43,6 +43,6 @@ if ( $total <= 1 ) {
 			'mid_size'     => 3,
 		);
 		$return =  paginate_links( apply_filters( 'woocommerce_pagination_args', $pagination ) );
-        echo str_replace( "<ul class='page-numbers'>", '<ul class="page-pagination">', $return );
+        echo str_replace( "<ul class='page-numbers'>", '<ul class="page-pagination  dfgdfg">', $return );
 	?>
 </nav>

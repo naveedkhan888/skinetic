@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div id="primary" class="content-area <?php xconnect_content_columns(); ?>">
-				<main id="main" class="sdfsdf site-main <?php xconnect_blog_style(); ?>">
+				<main id="main" class="site-main <?php xconnect_blog_style(); ?>">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 					endwhile;
 
-						//xconnect_posts_navigation();
+						xconnect_posts_navigation();
 
 					else :
 
@@ -41,7 +41,6 @@ get_header(); ?>
 					?>
 
 				</main><!-- #main -->
-				<?php xconnect_posts_navigation(); ?>
 			</div><!-- #primary -->
 			<?php get_sidebar(); ?>
 		</div>

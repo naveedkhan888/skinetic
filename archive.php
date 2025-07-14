@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div id="primary" class="content-area <?php xconnect_content_columns(); ?>">
-				<main id="main" class="site-main <?php xconnect_blog_style(); ?>">
+				<main id="main" class="sdfsdf site-main <?php xconnect_blog_style(); ?>">
 
 				<?php if ( have_posts() ) : ?>
 

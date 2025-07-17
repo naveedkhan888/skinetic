@@ -1,28 +1,22 @@
 <?php
-namespace Elementor; // Custom widgets must be defined in the Elementor namespace
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measure)
+namespace Elementor;
 
-/**
- * Widget Name: Logo
- */
-class xConnect_Logo extends Widget_Base{
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
- 	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
+class xConnect_Logo extends Widget_Base {
+
 	public function get_name() {
 		return 'ilogo';
 	}
 
-	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
 		return __( 'XP Logo', 'xconnect' );
 	}
 
-	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
 	public function get_icon() {
 		return 'eicon-logo';
 	}
 
-	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
 		return [ 'category_xconnect_header' ];
 	}
@@ -63,13 +57,14 @@ class xConnect_Logo extends Widget_Base{
 
 		$this->add_control(
 			'logo_image',
-			 [
+			[
 				'label' => esc_html__( 'Image', 'xconnect' ),
 				'type'  => Controls_Manager::MEDIA,
 				'default' => [
-					'url' => get_template_directory_uri().'/images/logo.svg',
+					'url' => '',
 				],
-			 ]
+				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'xconnect' ),
+			]
 		);
 
 		$this->add_responsive_control(
@@ -88,6 +83,7 @@ class xConnect_Logo extends Widget_Base{
 				],
 			]
 		);
+
 		$this->add_responsive_control(
 			'logo_height',
 			[
@@ -106,22 +102,37 @@ class xConnect_Logo extends Widget_Base{
 		);
 
 		$this->end_controls_section();
-		
 	}
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-		?>
-			
-	    	<div class="the-logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo esc_attr( $settings['logo_image']['url'] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				</a>			        
-		    </div>
-		    
-	    <?php
-	}
+		$logo_url = '';
 
+		// Check if widget logo image is set
+		if ( ! empty( $settings['logo_image']['url'] ) ) {
+			$logo_url = esc_url( $settings['logo_image']['url'] );
+		} 
+		// Else fallback to Customizer site logo
+		elseif ( has_custom_logo() ) {
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
+		}
+
+		// Fallback alt text
+		$site_name = get_bloginfo( 'name', 'display' );
+		$site_url  = esc_url( home_url( '/' ) );
+		?>
+		<div class="the-logo">
+			<a href="<?php echo $site_url; ?>">
+				<?php if ( $logo_url ) : ?>
+					<img src="<?php echo $logo_url; ?>" alt="<?php echo esc_attr( $site_name ); ?>">
+				<?php else : ?>
+					<span class="site-title"><?php echo esc_html( $site_name ); ?></span>
+				<?php endif; ?>
+			</a>
+		</div>
+		<?php
+	}
 }
-// After the xConnect_Logo class is defined, I must register the new widget class with Elementor:
+
 Plugin::instance()->widgets_manager->register( new xConnect_Logo() );

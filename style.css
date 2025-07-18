@@ -1580,14 +1580,13 @@ a:hover, a:active {
   font-size: 5px;
 }
 .main-navigation ul li li a::before {
-  content: "\f111";
+  content: "●";
   display: inline-block;
   vertical-align: middle;
-  margin: -2px 0 0 0;
+  margin: -4px 0 0 0;
     margin-right: 0px;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  font-family: "Font Awesome 5 Free";
   transform: scale(0);
   font-size: 0;
 }

@@ -1573,21 +1573,23 @@ a:hover, a:active {
   color: #0f3d3a;
 }
 
-.main-navigation ul li li a:hover:before {
+.main-navigation ul li li a:hover::before {
   opacity: 1;
-  margin: 0 6px 0 0;
-  width: 10px;
+  margin-right: 6px;
+  transform: scale(1);
+  font-size: 5px;
 }
-.main-navigation ul li li a:before {
-  content: '';
-  width: 0;
-  height: 1px;
-  background: #1a1b1e;
+.main-navigation ul li li a::before {
+  content: "\f111";
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
+  margin: -2px 0 0 0;
+    margin-right: 0px;
   transition: all 0.2s ease-in-out;
   opacity: 0;
+  font-family: "Font Awesome 5 Free";
+  transform: scale(0);
+  font-size: 0;
 }
 
 .main-navigation.no-line ul li li a:hover,

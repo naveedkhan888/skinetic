@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 /*
@@ -26,10 +26,10 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) : ?>
 
-        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'xconnect'), esc_html__('Comment (1)', 'xconnect'), esc_html__(  'Comments (%)', 'xconnect') ); ?></h4>
+        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'skinetic'), esc_html__('Comment (1)', 'skinetic'), esc_html__(  'Comments (%)', 'skinetic') ); ?></h4>
 
         <ol class="comment-list">
-            <?php wp_list_comments('callback=xconnect_comment_list'); ?>
+            <?php wp_list_comments('callback=skinetic_comment_list'); ?>
         </ol><!-- .comment-list -->
 
         <?php
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if ( ! comments_open() ) :
             ?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'xconnect' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'skinetic' ); ?></p>
         <?php
         endif;
 
@@ -50,17 +50,17 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
     $comments_args = array(
-        'title_reply'   => esc_html__('Leave a comment', 'xconnect'),
-        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'xconnect' ) .'" required></textarea></p>',
+        'title_reply'   => esc_html__('Leave a comment', 'skinetic'),
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'skinetic' ) .'" required></textarea></p>',
 
         'fields'        => apply_filters( 'comment_form_default_fields', array(
             'author' =>
                 '<div class="row"><p class="comment-form-author col-md-6"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Name*', 'xconnect' ) .'" required /></p>',
+                '" size="30" placeholder="'. esc_attr__( 'Name*', 'skinetic' ) .'" required /></p>',
 
             'email' =>
                 '<p class="comment-form-email col-md-6"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Email*', 'xconnect' ) .'" required /></p></div>',
+                '" size="30" placeholder="'. esc_attr__( 'Email*', 'skinetic' ) .'" required /></p></div>',
         )),
         'class_submit' => 'xptf-btn',
         'format'       => 'xhtml'

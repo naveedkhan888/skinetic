@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">	
-	<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'xconnect' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button class="search-submit" type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'xconnect' ); ?>"><i class="xp-webicon-search-1"></i></button>
+	<input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'skinetic' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	<button class="search-submit" type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'skinetic' ); ?>"><i class="xp-webicon-search-1"></i></button>
 	<input type="hidden" name="post_type" value="product" />
 </form>

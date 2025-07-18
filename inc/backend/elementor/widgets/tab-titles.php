@@ -14,7 +14,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Tab Titles', 'xconnect' );
+		return __( 'XP Tab Titles', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Titles', 'xconnect' ),
+				'label' => __( 'Titles', 'skinetic' ),
 			]
 		);
 
@@ -41,7 +41,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'titles',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => 'Content Marketing',
 			]
@@ -49,7 +49,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'title_link',
 			[
-				'label' => __( 'Link to ID Content', 'xconnect' ),
+				'label' => __( 'Link to ID Content', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '#tab-1',
 			]
@@ -59,7 +59,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$repeater->add_control(
 			'icon',
 			[
-				'label' => __( 'Icon', 'xconnect' ),
+				'label' => __( 'Icon', 'skinetic' ),
 				'type' => Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-star',
@@ -81,19 +81,19 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xconnect' ),
+				'label' => __( 'Alignment', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'  => [
-						'title' => __( 'Left', 'xconnect' ),
+						'title' => __( 'Left', 'skinetic' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xconnect' ),
+						'title' => __( 'Center', 'skinetic' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'xconnect' ),
+						'title' => __( 'Right', 'skinetic' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -109,7 +109,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Style', 'xconnect' ),
+				'label' => __( 'Style', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -117,7 +117,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -135,7 +135,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_responsive_control(
 			'padding_title',
 			[
-				'label' => __( 'Padding', 'xconnect' ),
+				'label' => __( 'Padding', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -146,7 +146,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'radius_title',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -168,14 +168,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'xconnect' ),
+				'label' => __( 'Normal', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -186,7 +186,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_title_hover',
 			[
-				'label' => __( 'Active/Hover', 'xconnect' ),
+				'label' => __( 'Active/Hover', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'title_active_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class CreamPoint_Tab_Titles extends Widget_Base {
 		$this->add_control(
 			'title_active_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

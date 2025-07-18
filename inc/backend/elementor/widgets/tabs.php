@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Tabs
  */
-class xConnect_Tabs extends Widget_Base{
+class Skinetic_Tabs extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Tabs extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Tabs', 'xconnect' );
+		return __( 'XP Tabs', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Tabs extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Tabs', 'xconnect' ),
+				'label' => __( 'Tabs', 'skinetic' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class xConnect_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_title',
 			[
-				'label' => __( 'Title & Description', 'xconnect' ),
+				'label' => __( 'Title & Description', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Tab Title', 'xconnect' ),
-				'placeholder' => __( 'Tab Title', 'xconnect' ),
+				'default' => __( 'Tab Title', 'skinetic' ),
+				'placeholder' => __( 'Tab Title', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class xConnect_Tabs extends Widget_Base{
 		$repeater->add_control(
 			'tab_content',
 			[
-				'label' => __( 'Content', 'xconnect' ),
-				'default' => __( 'Tab Content', 'xconnect' ),
-				'placeholder' => __( 'Tab Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
+				'default' => __( 'Tab Content', 'skinetic' ),
+				'placeholder' => __( 'Tab Content', 'skinetic' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_control(
 			'xp_tabs',
 			[
-				'label' => __( 'Tabs Items', 'xconnect' ),
+				'label' => __( 'Tabs Items', 'skinetic' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'tab_title' => __( 'Tab #1', 'xconnect' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'xconnect' ),
+						'tab_title' => __( 'Tab #1', 'skinetic' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'skinetic' ),
 					],
 					[
-						'tab_title' => __( 'Tab #2', 'xconnect' ),
-						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'xconnect' ),
+						'tab_title' => __( 'Tab #2', 'skinetic' ),
+						'tab_content' => __( 'We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales. Give us a call.', 'skinetic' ),
 					],
 				],
 				'title_field' => '{{{ tab_title }}}',
@@ -88,14 +88,14 @@ class xConnect_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'title_width',
 			[
-				'label' => __( 'Width', 'xconnect' ),
+				'label' => __( 'Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -116,7 +116,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -144,14 +144,14 @@ class xConnect_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'Normal', 'xconnect' ),
+				'label' => __( 'Normal', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,7 +162,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -184,14 +184,14 @@ class xConnect_Tabs extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Active/Hover', 'xconnect' ),
+				'label' => __( 'Active/Hover', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'title_bg_active',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -203,7 +203,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -214,7 +214,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_control(
 			'title_border_active',
 			[
-				'label' => __( 'Border Color', 'xconnect' ),
+				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -233,14 +233,14 @@ class xConnect_Tabs extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -260,7 +260,7 @@ class xConnect_Tabs extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'xconnect' ),
+				'label' => __( 'Padding', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -297,5 +297,5 @@ class xConnect_Tabs extends Widget_Base{
 	}
 
 }
-// After the xConnect_Tabs class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Tabs() );
+// After the Skinetic_Tabs class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Tabs() );

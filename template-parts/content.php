@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 ?>
@@ -25,7 +25,7 @@
 	    <?php if( $format == 'gallery' ) { ?>
 
 			<div class="entry-media">
-				<?php xconnect_posted_in(); ?>
+				<?php skinetic_posted_in(); ?>
 				<div class="gallery-post owl-carousel owl-theme">
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 		            <?php $images = rwmb_meta( 'post_gallery', array( 'size' =>'full' ) ); ?>
@@ -43,7 +43,7 @@
 	    <?php }elseif( $format == 'image' ) { ?>
 
 	    	<div class="entry-media">
-				<?php xconnect_posted_in(); ?>
+				<?php skinetic_posted_in(); ?>
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 				    <?php $images = rwmb_meta( 'post_image', array( 'size' =>'full' ) ); ?>
 				    <?php if($images){ ?>              
@@ -65,7 +65,7 @@
 	    <?php }elseif( $format == 'video' ){ ?>
 
 			<div class="entry-media">
-				<?php xconnect_posted_in(); ?>
+				<?php skinetic_posted_in(); ?>
 				<?php if( function_exists( 'rwmb_meta' ) ) { ?>
 				    <?php $images = rwmb_meta( 'bg_video', array( 'size' =>'full' ) ); ?>
 					<?php if($images){ ?>     
@@ -101,7 +101,7 @@
 	    <?php }elseif ( has_post_thumbnail() ) { ?>
 
 	        <div class="entry-media">
-	        	<?php xconnect_posted_in(); ?>
+	        	<?php skinetic_posted_in(); ?>
 	            <a href="<?php the_permalink(); ?>">
 	                <?php the_post_thumbnail(); ?>
 	            </a>
@@ -110,7 +110,7 @@
 	    <?php } ?>
 
 	    <div class="inner-post">
-			<?php if( $format != 'gallery' && $format != 'image' && $format != 'video' && !has_post_thumbnail() ) xconnect_posted_in(); ?>
+			<?php if( $format != 'gallery' && $format != 'image' && $format != 'video' && !has_post_thumbnail() ) skinetic_posted_in(); ?>
 	        <div class="entry-header">
 
 	            <?php the_title( '<h4 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
@@ -125,7 +125,7 @@
 		</div>
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php if( xconnect_get_option( 'post_entry_meta' ) ) { xconnect_post_meta(); } ?>
+			<?php if( skinetic_get_option( 'post_entry_meta' ) ) { skinetic_post_meta(); } ?>
 	        <a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

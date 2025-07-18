@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Heading 
  */
-class xConnect_Heading_dual extends Widget_Base{
+class Skinetic_Heading_dual extends Widget_Base{
 
  	public function get_name() {
 		return 'iheading2';
 	}
 
 	public function get_title() {
-		return __( 'XP Heading Dual', 'xconnect' );
+		return __( 'XP Heading Dual', 'skinetic' );
 	}
 
 	public function get_icon() {
@@ -20,14 +20,14 @@ class xConnect_Heading_dual extends Widget_Base{
 	}
 
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	public static function get_subtitle_style() {
 		return [
-			'' 				=> __( 'Default', 'xconnect' ),
-			'is_highlight' 	=> __( 'Highlight', 'xconnect' ),
-			'is_line' 		=> __( 'Line', 'xconnect' ),
+			'' 				=> __( 'Default', 'skinetic' ),
+			'is_highlight' 	=> __( 'Highlight', 'skinetic' ),
+			'is_line' 		=> __( 'Line', 'skinetic' ),
 		];
 	}
 
@@ -36,7 +36,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
 			]
 		);
 
@@ -44,13 +44,13 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'sub',
 			[
-				'label' => __( 'Subtitle', 'xconnect' ),
+				'label' => __( 'Subtitle', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'our services', 'xconnect' ),
-				'placeholder' => __( 'Enter your subtitle', 'xconnect' ),
+				'default' => __( 'our services', 'skinetic' ),
+				'placeholder' => __( 'Enter your subtitle', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -60,13 +60,13 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Main Title', 'xconnect' ),
+				'label' => __( 'Main Title', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'What we do', 'xconnect' ),
-				'placeholder' => __( 'Enter your title', 'xconnect' ),
+				'default' => __( 'What we do', 'skinetic' ),
+				'placeholder' => __( 'Enter your title', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -75,13 +75,13 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_1',
 			[
-				'label' => __( 'First Parent Title', 'xconnect' ),
+				'label' => __( 'First Parent Title', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'First', 'xconnect' ),
-				'placeholder' => __( 'Enter first parent title', 'xconnect' ),
+				'default' => __( 'First', 'skinetic' ),
+				'placeholder' => __( 'Enter first parent title', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -90,13 +90,13 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_2',
 			[
-				'label' => __( 'Second Parent Title', 'xconnect' ),
+				'label' => __( 'Second Parent Title', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'Second', 'xconnect' ),
-				'placeholder' => __( 'Enter second parent title', 'xconnect' ),
+				'default' => __( 'Second', 'skinetic' ),
+				'placeholder' => __( 'Enter second parent title', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -104,7 +104,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'xconnect' ),
+				'label' => __( 'Title HTML Tag', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -124,19 +124,19 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xconnect' ),
+				'label' => __( 'Alignment', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xconnect' ),
+						'title' => __( 'Left', 'skinetic' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xconnect' ),
+						'title' => __( 'Center', 'skinetic' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xconnect' ),
+						'title' => __( 'Right', 'skinetic' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -153,7 +153,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'xconnect' ),
+				'label' => __( 'Heading', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -162,7 +162,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'xconnect' ),
+				'label' => __( 'Subtitle', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -171,7 +171,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'subtitle_style',
 			[
-				'label' => __( 'Subtitle Style', 'xconnect' ),
+				'label' => __( 'Subtitle Style', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => self::get_subtitle_style(),
@@ -180,7 +180,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'line_width',
 			[
-				'label' => __( 'Width', 'xconnect' ),
+				'label' => __( 'Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -205,7 +205,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -217,7 +217,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background color', 'xconnect' ),
+				'label' => __( 'Background color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -231,7 +231,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'stitle_border',
 			[
-				'label' => __( 'Border Color', 'xconnect' ),
+				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -252,7 +252,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_parent_title_1',
 			[
-				'label' => __( 'First Parent Title', 'xconnect' ),
+				'label' => __( 'First Parent Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -279,7 +279,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_1_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'heading_parent_title_1_colors',
             [
-                'label' => __( 'First Parent Title Colors', 'xconnect' ),
+                'label' => __( 'First Parent Title Colors', 'skinetic' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -310,15 +310,15 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_1_stroke_enable',
             [
-                'label' => __( 'Text Stroke Effect', 'xconnect' ),
+                'label' => __( 'Text Stroke Effect', 'skinetic' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'no' => [
-                        'title' => __( 'No', 'xconnect' ),
+                        'title' => __( 'No', 'skinetic' ),
                         'icon' => 'eicon-close',
                     ],
                     'yes' => [
-                        'title' => __( 'Yes', 'xconnect' ),
+                        'title' => __( 'Yes', 'skinetic' ),
                         'icon' => 'eicon-check',
                     ],
                 ],
@@ -329,7 +329,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_1_stroke_color',
             [
-                'label' => __( 'Stroke Color', 'xconnect' ),
+                'label' => __( 'Stroke Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -344,7 +344,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_responsive_control(
             'parent_title_1_stroke_width',
             [
-                'label' => __( 'Stroke Width', 'xconnect' ),
+                'label' => __( 'Stroke Width', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -371,7 +371,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_parent_title_2_colors',
 			[
-				'label' => __( 'Second Parent Title Colors', 'xconnect' ),
+				'label' => __( 'Second Parent Title Colors', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -380,7 +380,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'parent_title_2_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -401,7 +401,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'heading_parent_title_2',
             [
-                'label' => __( 'Second Parent Title', 'xconnect' ),
+                'label' => __( 'Second Parent Title', 'skinetic' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -411,15 +411,15 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_2_stroke_enable',
             [
-                'label' => __( 'Text Stroke Effect', 'xconnect' ),
+                'label' => __( 'Text Stroke Effect', 'skinetic' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'no' => [
-                        'title' => __( 'No', 'xconnect' ),
+                        'title' => __( 'No', 'skinetic' ),
                         'icon' => 'eicon-close',
                     ],
                     'yes' => [
-                        'title' => __( 'Yes', 'xconnect' ),
+                        'title' => __( 'Yes', 'skinetic' ),
                         'icon' => 'eicon-check',
                     ],
                 ],
@@ -430,7 +430,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_control(
             'parent_title_2_stroke_color',
             [
-                'label' => __( 'Stroke Color', 'xconnect' ),
+                'label' => __( 'Stroke Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -445,7 +445,7 @@ class xConnect_Heading_dual extends Widget_Base{
         $this->add_responsive_control(
             'parent_title_2_stroke_width',
             [
-                'label' => __( 'Stroke Width', 'xconnect' ),
+                'label' => __( 'Stroke Width', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -471,7 +471,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -479,7 +479,7 @@ class xConnect_Heading_dual extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,4 +541,4 @@ class xConnect_Heading_dual extends Widget_Base{
     }
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Heading_dual() );
+Plugin::instance()->widgets_manager->register( new Skinetic_Heading_dual() );

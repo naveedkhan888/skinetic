@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Projects Carousel
  */
-class xConnect_Portfolio_Slider extends Widget_Base{
+class Skinetic_Portfolio_Slider extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Carousel', 'xconnect' );
+		return __( 'XP Portfolio Carousel', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Projects', 'xconnect' ),
+				'label' => __( 'Projects', 'skinetic' ),
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'xconnect' ),
+				'label' => __( 'Select Categories', 'skinetic' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'xconnect' ),
+				'placeholder' => __( 'All Categories', 'skinetic' ),
 			]
 		);
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'xconnect' ),
+				'label' => __( 'Show Number Projects', 'skinetic' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '5',
 			]
@@ -58,7 +58,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'xconnect' ),
+				'label' => __( 'Slider', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -70,10 +70,10 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'xconnect' ),
+				'label' => __( 'Slides to Show', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'xconnect' ),
+					'' => __( 'Default', 'skinetic' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -81,43 +81,43 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'center_mode',
 			[
-				'label' => __( 'Center Mode', 'xconnect' ),
+				'label' => __( 'Center Mode', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xconnect' ),
-					'false' => __( 'No', 'xconnect' ),
+					'true' => __( 'Yes', 'skinetic' ),
+					'false' => __( 'No', 'skinetic' ),
 				]
 			]
 		);
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'xconnect' ),
+				'label' => __( 'Loop', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xconnect' ),
-					'false' => __( 'No', 'xconnect' ),
+					'true' => __( 'Yes', 'skinetic' ),
+					'false' => __( 'No', 'skinetic' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'xconnect' ),
+				'label' => __( 'Autoplay', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xconnect' ),
-					'false' => __( 'No', 'xconnect' ),
+					'true' => __( 'Yes', 'skinetic' ),
+					'false' => __( 'No', 'skinetic' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'xconnect' ),
+				'label' => __( 'Autoplay Timeout', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -137,31 +137,31 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'xconnect' ),
+				'label' => __( 'Arrows', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'xconnect' ),
-					'false'  => __( 'No', 'xconnect' ),
+					'true'   => __( 'Yes', 'skinetic' ),
+					'false'  => __( 'No', 'skinetic' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'xconnect' ),
+				'label' => __( 'Dots', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'xconnect' ),
-					'false'  => __( 'No', 'xconnect' ),
+					'true'   => __( 'Yes', 'skinetic' ),
+					'false'  => __( 'No', 'skinetic' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'xconnect' ),
+				'label' => __( 'Gap Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,14 +176,14 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'xconnect' ),
+				'label' => __( 'Project Items', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'xconnect' ),
+				'label' => __( 'General', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -191,19 +191,19 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'xconnect' ),
+				'label' => __( 'Alignment Info', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xconnect' ),
+						'title' => __( 'Left', 'skinetic' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xconnect' ),
+						'title' => __( 'Center', 'skinetic' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xconnect' ),
+						'title' => __( 'Right', 'skinetic' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -226,7 +226,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'xconnect' ),
+				'label' => __( 'Border Radius Image', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -237,10 +237,10 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'xconnect' ),
+				'label' => __( 'Animation Image Hover', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xconnect' ),
-				'label_off' => __( 'No', 'xconnect' ),
+				'label_on' => __( 'Yes', 'skinetic' ),
+				'label_off' => __( 'No', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -250,7 +250,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -258,7 +258,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -274,7 +274,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'xconnect' ),
+				'label' => __( 'Hover Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -305,7 +305,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_overlay',
 			[
-				'label' => __( 'Category', 'xconnect' ),
+				'label' => __( 'Category', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -313,10 +313,10 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'xconnect' ),
+				'label' => __( 'Show Category', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xconnect' ),
-				'label_off' => __( 'Hide', 'xconnect' ),
+				'label_on' => __( 'Show', 'skinetic' ),
+				'label_off' => __( 'Hide', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -324,7 +324,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'xconnect' ),
+				'label' => __( 'Dots', 'skinetic' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -363,7 +363,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -380,7 +380,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'xconnect' ),
+                'label' => __( 'Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -391,7 +391,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'xconnect' ),
+                'label' => __( 'Color Active', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -405,7 +405,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'xconnect' ),
+				'label' => __( 'Arrows', 'skinetic' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -415,7 +415,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -426,7 +426,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'xconnect' ),
+				'label' => __( 'Color Hover', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -437,7 +437,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -448,7 +448,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'xconnect' ),
+				'label' => __( 'Background Hover', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -459,7 +459,7 @@ class xConnect_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -549,5 +549,5 @@ data-mgaps="<?php echo esc_attr( $mgaps ); ?>">
 	  	return $cat;
 	}
 }
-// After the xConnect_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Portfolio_Slider() );
+// After the Skinetic_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Portfolio_Slider() );

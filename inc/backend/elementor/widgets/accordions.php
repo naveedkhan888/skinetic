@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Accordions
  */
-class xConnect_Accordions extends Widget_Base{
+class Skinetic_Accordions extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Accordions extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Accordions', 'xconnect' );
+		return __( 'XP Accordions', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Accordions extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordions', 'xconnect' ),
+				'label' => __( 'Accordions', 'skinetic' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class xConnect_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_title',
 			[
-				'label' => __( 'Title & Content', 'xconnect' ),
+				'label' => __( 'Title & Content', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title', 'xconnect' ),
-				'placeholder' => __( 'Accordion Title', 'xconnect' ),
+				'default' => __( 'Accordion Title', 'skinetic' ),
+				'placeholder' => __( 'Accordion Title', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class xConnect_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_content',
 			[
-				'label' => __( 'Content', 'xconnect' ),
-				'default' => __( 'Accordion Content', 'xconnect' ),
-				'placeholder' => __( 'Accordion Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
+				'default' => __( 'Accordion Content', 'skinetic' ),
+				'placeholder' => __( 'Accordion Content', 'skinetic' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'xp_accs',
 			[
-				'label' => __( 'Accordion Items', 'xconnect' ),
+				'label' => __( 'Accordion Items', 'skinetic' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'acc_title' => __( 'Accordion #1', 'xconnect' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'xconnect' ),
+						'acc_title' => __( 'Accordion #1', 'skinetic' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'skinetic' ),
 					],
 					[
-						'acc_title' => __( 'Accordion #2', 'xconnect' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'xconnect' ),
+						'acc_title' => __( 'Accordion #2', 'skinetic' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'skinetic' ),
 					],
 				],
 				'title_field' => '{{{ acc_title }}}',
@@ -83,7 +83,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'default_active',
 			[
-				'label'   => esc_html__( 'Default Active', 'xconnect' ),
+				'label'   => esc_html__( 'Default Active', 'skinetic' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -91,7 +91,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'item_active',
 			[
-				'label' => esc_html__( 'Item Active', 'xconnect' ),
+				'label' => esc_html__( 'Item Active', 'skinetic' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
 				'step' => 1,
@@ -109,14 +109,14 @@ class xConnect_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_title',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -127,7 +127,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'bg_title_active',
 			[
-				'label' => __( 'Background Active', 'xconnect' ),
+				'label' => __( 'Background Active', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -138,7 +138,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_border',
 			[
-				'label' => __( 'Border Color', 'xconnect' ),
+				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -149,7 +149,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color Active', 'xconnect' ),
+				'label' => __( 'Color Active', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'title_padding',
 			[
-				'label' => __( 'Padding', 'xconnect' ),
+				'label' => __( 'Padding', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -192,14 +192,14 @@ class xConnect_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_content',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -210,7 +210,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -228,7 +228,7 @@ class xConnect_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'xconnect' ),
+				'label' => __( 'Padding', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -275,5 +275,5 @@ class xConnect_Accordions extends Widget_Base{
 	}
 
 }
-// After the xConnect_Accordions class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Accordions() );
+// After the Skinetic_Accordions class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Accordions() );

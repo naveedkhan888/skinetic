@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 ?>
@@ -16,7 +16,7 @@
 	    the_content();
 
 	    wp_link_pages( array(
-	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'xconnect' ),
+	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'skinetic' ),
 	        'after'  => '</div>',
 	    ) );
 	    ?>

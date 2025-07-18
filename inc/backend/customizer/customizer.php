@@ -2,7 +2,7 @@
 /**
  * Theme customizer
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 // Exit if accessed directly
@@ -17,7 +17,7 @@ add_action('after_setup_theme', function() {
     }
 }, 20);
 
-class xConnect_Customize {
+class Skinetic_Customize {
 	/**
 	 * Customize settings
 	 *
@@ -143,18 +143,18 @@ class xConnect_Customize {
  *
  * @return bool|string
  */
-function xconnect_get_option( $name ) {
-	global $xconnect_customize;
+function skinetic_get_option( $name ) {
+	global $skinetic_customize;
 
 	$value = false;
 
 	if ( class_exists( 'Kirki' ) ) {
-		$value = Kirki::get_option( 'xconnect', $name );
-	} elseif ( ! empty( $xconnect_customize ) ) {
-		$value = $xconnect_customize->get_option( $name );
+		$value = Kirki::get_option( 'skinetic', $name );
+	} elseif ( ! empty( $skinetic_customize ) ) {
+		$value = $skinetic_customize->get_option( $name );
 	}
 
-	return apply_filters( 'xconnect_get_option', $value, $name );
+	return apply_filters( 'skinetic_get_option', $value, $name );
 }
 
 /**
@@ -164,14 +164,14 @@ function xconnect_get_option( $name ) {
  *
  * @return mixed
  */
-function xconnect_get_option_default( $name ) {
-	global $xconnect_customize;
+function skinetic_get_option_default( $name ) {
+	global $skinetic_customize;
 
-	if ( empty( $xconnect_customize ) ) {
+	if ( empty( $skinetic_customize ) ) {
 		return false;
 	}
 
-	return $xconnect_customize->get_option_default( $name );
+	return $skinetic_customize->get_option_default( $name );
 }
 
 /**
@@ -179,12 +179,12 @@ function xconnect_get_option_default( $name ) {
  *
  * @param object $wp_customize
  */
-function xconnect_customize_modify( $wp_customize ) {
+function skinetic_customize_modify( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->panel     = 'general';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'general';
 }
 
-add_action( 'customize_register', 'xconnect_customize_modify' );
+add_action( 'customize_register', 'skinetic_customize_modify' );
 
 
 /**
@@ -195,27 +195,27 @@ add_action( 'customize_register', 'xconnect_customize_modify' );
  *
  * @return array
  */
-function xconnect_customize_settings() {
+function skinetic_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'xconnect',
+		'theme' => 'skinetic',
 	);
 
 	$panels = array(
 		'general'         => array(
 			'priority'    => 5,
-			'title'       => esc_html__( 'General', 'xconnect' ),
+			'title'       => esc_html__( 'General', 'skinetic' ),
         ),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'xconnect' ),
+			'title'      => esc_html__( 'Blog', 'skinetic' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         'portfolio'       => array(
-			'title'       => esc_html__( 'Portfolio', 'xconnect' ),
+			'title'       => esc_html__( 'Portfolio', 'skinetic' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',			
 		),
@@ -224,28 +224,28 @@ function xconnect_customize_settings() {
 	$sections = array(
         /* header */
         'main_header'     => array(
-            'title'       => esc_html__( 'Header', 'xconnect' ),
+            'title'       => esc_html__( 'Header', 'skinetic' ),
             'description' => '',
             'priority'    => 8,
             'capability'  => 'edit_theme_options',
         ),
         /* page header */
         'page_header'     => array(
-            'title'       => esc_html__( 'Page Header', 'xconnect' ),
+            'title'       => esc_html__( 'Page Header', 'skinetic' ),
             'description' => '',
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
         /* blog */
         'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'xconnect' ),
+			'title'       => esc_html__( 'Blog Page', 'skinetic' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'xconnect' ),
+			'title'       => esc_html__( 'Single Post', 'skinetic' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -253,46 +253,46 @@ function xconnect_customize_settings() {
         ),
         /* footer */
         'footer'         => array(
-			'title'      => esc_html__( 'Footer', 'xconnect' ),
+			'title'      => esc_html__( 'Footer', 'skinetic' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         /* portfolio */
         'portfolio_page'  => array(
-			'title'       => esc_html__( 'Archive Page', 'xconnect' ),
+			'title'       => esc_html__( 'Archive Page', 'skinetic' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		'portfolio_post'  => array(
-			'title'       => esc_html__( 'Single Page', 'xconnect' ),
+			'title'       => esc_html__( 'Single Page', 'skinetic' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		/* typography */
 		'typography'           => array(
-            'title'       => esc_html__( 'Typography', 'xconnect' ),
+            'title'       => esc_html__( 'Typography', 'skinetic' ),
             'description' => '',
             'priority'    => 15,
             'capability'  => 'edit_theme_options',
         ),
 		/* 404 */
 		'error_404'       => array(
-            'title'       => esc_html__( '404', 'xconnect' ),
+            'title'       => esc_html__( '404', 'skinetic' ),
             'description' => '',
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
         /* color scheme */
         'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'xconnect' ),
+			'title'      => esc_html__( 'Color Scheme', 'skinetic' ),
 			'priority'   => 200,
 			'capability' => 'edit_theme_options',
 		),
 		/* js code */
 		'script_code'   => array(
-			'title'      => esc_html__( 'Google Analytics(Script Code)', 'xconnect' ),
+			'title'      => esc_html__( 'Google Analytics(Script Code)', 'skinetic' ),
 			'priority'   => 210,
 			'capability' => 'edit_theme_options',
 		),
@@ -302,47 +302,47 @@ function xconnect_customize_settings() {
         /* header settings */
 		'header_layout'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Desktop', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose the header on desktop.', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Header Desktop', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose the header on desktop.', 'skinetic' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 3,
-	 		'placeholder' => esc_attr__( 'Select a header', 'xconnect' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'skinetic' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
 		'header_fixed'    => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Header Transparent?', 'xconnect' ),
-	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'xconnect' ), 
+			'label'       => esc_html__( 'Header Transparent?', 'skinetic' ),
+	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'skinetic' ), 
             'section'     => 'main_header',
 			'default'     => '1',
 			'priority'    => 4,
         ),
         'header_mobile'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Mobile', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose the header on mobile.', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Header Mobile', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose the header on mobile.', 'skinetic' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 5,
-	 		'placeholder' => esc_attr__( 'Select a header', 'xconnect' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'skinetic' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
         ),
         'is_sidepanel'    => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Side Panel for all site?', 'xconnect' ),
+            'label'       => esc_html__( 'Side Panel for all site?', 'skinetic' ),
             'section'     => 'main_header',
             'default'     => '1',
             'priority'    => 6,
         ),
         'sidepanel_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Side Panel', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose the side panel on header.', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Side Panel', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose the side panel on header.', 'skinetic' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 6,
-	 		'placeholder' => esc_attr__( 'Select a panel', 'xconnect' ), 
+	 		'placeholder' => esc_attr__( 'Select a panel', 'skinetic' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
             'active_callback' => array(
                 array(
@@ -354,7 +354,7 @@ function xconnect_customize_settings() {
 		),
 		'panel_left'     => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Side Panel On Left', 'xconnect' ),
+			'label'       => esc_html__( 'Side Panel On Left', 'skinetic' ),
             'section'     => 'main_header',
 			'default'     => '0',
 			'priority'    => 7,
@@ -374,14 +374,14 @@ function xconnect_customize_settings() {
         /*page header */
         'pheader_switch'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Page Header On/Off', 'xconnect' ),
+            'label'       => esc_html__( 'Page Header On/Off', 'skinetic' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
         ),
         'breadcrumbs'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On/Off', 'xconnect' ),
+            'label'       => esc_html__( 'Breadcrumbs On/Off', 'skinetic' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
@@ -395,7 +395,7 @@ function xconnect_customize_settings() {
         ),
         'left_bread'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On Left', 'xconnect' ),
+            'label'       => esc_html__( 'Breadcrumbs On Left', 'skinetic' ),
             'section'     => 'page_header',
             'default'     => 0,
             'priority'    => 10,
@@ -414,7 +414,7 @@ function xconnect_customize_settings() {
         ),
         'pheader_img'  => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Background Image', 'xconnect' ),
+            'label'    => esc_html__( 'Background Image', 'skinetic' ),
             'section'  => 'page_header',
             'default'  => '',
             'priority' => 10,
@@ -434,7 +434,7 @@ function xconnect_customize_settings() {
         ),
         'pheader_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'xconnect' ),
+            'label'    => esc_html__( 'Background Color', 'skinetic' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -453,7 +453,7 @@ function xconnect_customize_settings() {
         ),
         'ptitle_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Title Color', 'xconnect' ),
+            'label'    => esc_html__( 'Title Color', 'skinetic' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -472,7 +472,7 @@ function xconnect_customize_settings() {
         ),
         'bread_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Breadcrumbs Color', 'xconnect' ),
+            'label'    => esc_html__( 'Breadcrumbs Color', 'skinetic' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -496,14 +496,14 @@ function xconnect_customize_settings() {
         ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'xconnect' ),
+            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'skinetic' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'xconnect' ),
-                'tablet'  => esc_attr__( 'Tablet', 'xconnect' ),
-                'mobile'  => esc_attr__( 'Mobile', 'xconnect' ),
+                'desktop' => esc_attr__( 'Desktop', 'skinetic' ),
+                'tablet'  => esc_attr__( 'Tablet', 'skinetic' ),
+                'mobile'  => esc_attr__( 'Mobile', 'skinetic' ),
             ),
             'output'   => array(
                 array(
@@ -540,14 +540,14 @@ function xconnect_customize_settings() {
         ),
         'head_size'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'xconnect' ),
+            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'skinetic' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'xconnect' ),
-                'tablet'  => esc_attr__( 'Tablet', 'xconnect' ),
-                'mobile'  => esc_attr__( 'Mobile', 'xconnect' ),
+                'desktop' => esc_attr__( 'Desktop', 'skinetic' ),
+                'tablet'  => esc_attr__( 'Tablet', 'skinetic' ),
+                'mobile'  => esc_attr__( 'Mobile', 'skinetic' ),
             ),
             'output'   => array(
                 array(
@@ -585,11 +585,11 @@ function xconnect_customize_settings() {
         /* blog settings */
 		'blog_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Blog Layout', 'xconnect' ),
+			'label'       => esc_html__( 'Blog Layout', 'skinetic' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'xconnect' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'skinetic' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -598,27 +598,27 @@ function xconnect_customize_settings() {
 		),
         'blog_style'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Style', 'xconnect' ),
+            'label'       => esc_html__( 'Blog Style', 'skinetic' ),
             'section'     => 'blog_page',
             'default'     => 'list',
             'priority'    => 8,
-            'description' => esc_html__( 'Select style default for the blog page.', 'xconnect' ),
+            'description' => esc_html__( 'Select style default for the blog page.', 'skinetic' ),
             'choices'     => array(
-                'list' => esc_attr__( 'Blog List', 'xconnect' ),
-                'grid' => esc_attr__( 'Blog Grid', 'xconnect' ),
+                'list' => esc_attr__( 'Blog List', 'skinetic' ),
+                'grid' => esc_attr__( 'Blog Grid', 'skinetic' ),
             ),
         ),
         'blog_columns'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Columns', 'xconnect' ),
+            'label'       => esc_html__( 'Blog Columns', 'skinetic' ),
             'section'     => 'blog_page',
             'default'     => 'pf_2_cols',
             'priority'    => 8,
-            'description' => esc_html__( 'Select columns default for the blog page.', 'xconnect' ),
+            'description' => esc_html__( 'Select columns default for the blog page.', 'skinetic' ),
             'choices'     => array(
-                'pf_2_cols' => esc_attr__( '2 Columns', 'xconnect' ),
-                'pf_3_cols' => esc_attr__( '3 Columns', 'xconnect' ),
-                'pf_4_cols' => esc_attr__( '4 Columns', 'xconnect' ),
+                'pf_2_cols' => esc_attr__( '2 Columns', 'skinetic' ),
+                'pf_3_cols' => esc_attr__( '3 Columns', 'skinetic' ),
+                'pf_4_cols' => esc_attr__( '4 Columns', 'skinetic' ),
             ),
             'active_callback' => array(
                 array(
@@ -630,20 +630,20 @@ function xconnect_customize_settings() {
         ),	
 		'post_entry_meta'              => array(
             'type'     => 'multicheck',
-            'label'    => esc_html__( 'Entry Meta', 'xconnect' ),
+            'label'    => esc_html__( 'Entry Meta', 'skinetic' ),
             'section'  => 'blog_page',
             'default'  => array( 'date', 'author', 'comm' ),
             'choices'  => array(
-                'date'    => esc_html__( 'Date', 'xconnect' ),
-                'author'  => esc_html__( 'Author', 'xconnect' ),
-                'comm'    => esc_html__( 'Comment', 'xconnect' ),
+                'date'    => esc_html__( 'Date', 'skinetic' ),
+                'author'  => esc_html__( 'Author', 'skinetic' ),
+                'comm'    => esc_html__( 'Comment', 'skinetic' ),
             ),
             'priority' => 10,
         ),
         /* single blog */
         'single_post_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Layout', 'xconnect' ),
+            'label'       => esc_html__( 'Layout', 'skinetic' ),
             'section'     => 'single_post',
             'default'     => 'content-sidebar',
             'priority'    => 10,
@@ -655,14 +655,14 @@ function xconnect_customize_settings() {
         ),
         'ptitle_post'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Page Title', 'xconnect' ),
+			'label'           => esc_html__( 'Page Title', 'skinetic' ),
 			'section'         => 'single_post',
-			'default'         => esc_html__( 'Blog Single', 'xconnect' ),
+			'default'         => esc_html__( 'Blog Single', 'skinetic' ),
 			'priority'        => 10,
 		),
 		'single_separator1'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Social Share', 'xconnect' ),
+			'label'       => esc_html__( 'Social Share', 'skinetic' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
@@ -672,41 +672,41 @@ function xconnect_customize_settings() {
             'section'  => 'single_post',
             'default'  => array( 'twitter', 'facebook', 'pinterest', 'linkedin' ),
             'choices'  => array(
-                'twit'  	=> esc_html__( 'Twitter', 'xconnect' ),
-                'face'    	=> esc_html__( 'Facebook', 'xconnect' ),
-                'pint'     	=> esc_html__( 'Pinterest', 'xconnect' ),
-                'link'     	=> esc_html__( 'Linkedin', 'xconnect' ),
-                'google'  	=> esc_html__( 'Google Plus', 'xconnect' ),
-                'tumblr'    => esc_html__( 'Tumblr', 'xconnect' ),
-                'reddit'    => esc_html__( 'Reddit', 'xconnect' ),
-                'vk'     	=> esc_html__( 'VK', 'xconnect' ),
+                'twit'  	=> esc_html__( 'Twitter', 'skinetic' ),
+                'face'    	=> esc_html__( 'Facebook', 'skinetic' ),
+                'pint'     	=> esc_html__( 'Pinterest', 'skinetic' ),
+                'link'     	=> esc_html__( 'Linkedin', 'skinetic' ),
+                'google'  	=> esc_html__( 'Google Plus', 'skinetic' ),
+                'tumblr'    => esc_html__( 'Tumblr', 'skinetic' ),
+                'reddit'    => esc_html__( 'Reddit', 'skinetic' ),
+                'vk'     	=> esc_html__( 'VK', 'skinetic' ),
             ),
             'priority' => 10,
         ),
         'single_separator2'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Entry Footer', 'xconnect' ),
+			'label'       => esc_html__( 'Entry Footer', 'skinetic' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
 		),
         'author_box'      => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Author Info Box', 'xconnect' ),
+			'label'       => esc_attr__( 'Author Info Box', 'skinetic' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'post_nav'     	  => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Post Navigation', 'xconnect' ),
+			'label'       => esc_attr__( 'Post Navigation', 'skinetic' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'related_post'    => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Related Posts', 'xconnect' ),
+			'label'       => esc_attr__( 'Related Posts', 'skinetic' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
@@ -714,20 +714,20 @@ function xconnect_customize_settings() {
         /* project settings */
 		'portfolio_archive'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Archive', 'xconnect' ),
+			'label'       => esc_html__( 'Portfolio Archive', 'skinetic' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'archive_default',
 			'priority'    => 1,
-			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'xconnect' ),
+			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'skinetic' ),
 			'choices'     => array(
-				'archive_default' => esc_attr__( 'Archive page default', 'xconnect' ),
-				'archive_custom' => esc_attr__( 'Archive page custom', 'xconnect' ),
+				'archive_default' => esc_attr__( 'Archive page default', 'skinetic' ),
+				'archive_custom' => esc_attr__( 'Archive page custom', 'skinetic' ),
 			),
 		),
 		'archive_page_custom'     => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'skinetic' ), 
 	 		'section'     => 'portfolio_page', 
 	 		'default'     => '', 
 	 		'priority'    => 2,	 		
@@ -741,15 +741,15 @@ function xconnect_customize_settings() {
 		),
 		'portfolio_column'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Columns', 'xconnect' ),
+			'label'       => esc_html__( 'Portfolio Columns', 'skinetic' ),
 			'section'     => 'portfolio_page',
 			'default'     => '3cl',
 			'priority'    => 3,
-			'description' => esc_html__( 'Select default column for the portfolio page.', 'xconnect' ),
+			'description' => esc_html__( 'Select default column for the portfolio page.', 'skinetic' ),
 			'choices'     => array(
-				'2cl' => esc_attr__( '2 Column', 'xconnect' ),
-				'3cl' => esc_attr__( '3 Column', 'xconnect' ),
-				'4cl' => esc_attr__( '4 Column', 'xconnect' ),
+				'2cl' => esc_attr__( '2 Column', 'skinetic' ),
+				'3cl' => esc_attr__( '3 Column', 'skinetic' ),
+				'4cl' => esc_attr__( '4 Column', 'skinetic' ),
 			),
 			'active_callback' => array(
 				array(
@@ -761,15 +761,15 @@ function xconnect_customize_settings() {
 		),
 		'portfolio_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Hover Style', 'xconnect' ),
+			'label'       => esc_html__( 'Hover Style', 'skinetic' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'style1',
 			'priority'    => 4,
-			'description' => esc_html__( 'Select default style for the portfolio page.', 'xconnect' ),
+			'description' => esc_html__( 'Select default style for the portfolio page.', 'skinetic' ),
 			'choices'     => array(
-				'style1' => esc_attr__( 'Background Overlay', 'xconnect' ),
-				'style2' => esc_attr__( 'Background Solid', 'xconnect' ),
-				'style3' => esc_attr__( 'Hidden', 'xconnect' ),
+				'style1' => esc_attr__( 'Background Overlay', 'skinetic' ),
+				'style2' => esc_attr__( 'Background Solid', 'skinetic' ),
+				'style3' => esc_attr__( 'Hidden', 'skinetic' ),
 			),
 			'active_callback' => array(
 				array(
@@ -783,8 +783,8 @@ function xconnect_customize_settings() {
 			'type'        => 'number',
 			'section'     => 'portfolio_page',
 			'priority'    => 5,
-			'label'       => esc_html__( 'Posts per page', 'xconnect' ),			
-			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'xconnect' ),
+			'label'       => esc_html__( 'Posts per page', 'skinetic' ),			
+			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'skinetic' ),
 			'default'     => '',
 			'active_callback' => array(
 				array(
@@ -796,23 +796,23 @@ function xconnect_customize_settings() {
 		),
 		'pf_nav'     	  => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Projects Navigation On/Off', 'xconnect' ),
+			'label'       => esc_attr__( 'Projects Navigation On/Off', 'skinetic' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_switch'     => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Related Projects On/Off', 'xconnect' ),
+			'label'       => esc_attr__( 'Related Projects On/Off', 'skinetic' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_text'      => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Related Projects Heading', 'xconnect' ),
+			'label'           => esc_html__( 'Related Projects Heading', 'skinetic' ),
 			'section'         => 'portfolio_post',
-			'default'         => esc_html__( 'Related Projects', 'xconnect' ),
+			'default'         => esc_html__( 'Related Projects', 'skinetic' ),
 			'priority'        => 7,
 			'active_callback' => array(
 				array(
@@ -825,17 +825,17 @@ function xconnect_customize_settings() {
         /* footer settings */
 		'footer_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Footer', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Footer', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'skinetic' ), 
 	 		'section'     => 'footer', 
 	 		'default'     => '', 
 	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a footer', 'xconnect' ), 
+	 		'placeholder' => esc_attr__( 'Select a footer', 'skinetic' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_footer_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
         'footer_fixed'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Footer Fixed On/Off?', 'xconnect' ),
+            'label'       => esc_html__( 'Footer Fixed On/Off?', 'skinetic' ),
             'section'     => 'footer',
             'default'     => 0,
             'priority'    => 2,
@@ -849,14 +849,14 @@ function xconnect_customize_settings() {
 		),
 		'backtotop'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Back To Top On/Off?', 'xconnect' ),
+            'label'       => esc_html__( 'Back To Top On/Off?', 'skinetic' ),
             'section'     => 'footer',
             'default'     => 1,
             'priority'    => 4,
         ),
         'bg_backtotop'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'xconnect' ),
+            'label'    => esc_html__( 'Background Color', 'skinetic' ),
             'section'  => 'footer',
             'priority' => 5,
             'default'     => '',
@@ -876,7 +876,7 @@ function xconnect_customize_settings() {
         ),
         'color_backtotop' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Color', 'xconnect' ),
+            'label'    => esc_html__( 'Color', 'skinetic' ),
             'section'  => 'footer',
             'priority' => 6,
             'default'     => '',
@@ -896,7 +896,7 @@ function xconnect_customize_settings() {
         ),
         'spacing_backtotop' => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Spacing', 'xconnect' ),
+            'label'    => esc_html__( 'Spacing', 'skinetic' ),
             'section'  => 'footer',
             'priority' => 7,
             'default'     => array(
@@ -905,8 +905,8 @@ function xconnect_customize_settings() {
 			),
 			'choices'     => array(
 				'labels' => array(
-					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'xconnect' ),
-					'right'   => esc_html__( 'Right (Ex: 20px)', 'xconnect' ),
+					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'skinetic' ),
+					'right'   => esc_html__( 'Right (Ex: 20px)', 'skinetic' ),
 				),
 			),
             'output'    => array(
@@ -932,7 +932,7 @@ function xconnect_customize_settings() {
 		/* typography */
         'body_typo'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 1', 'xconnect' ),
+            'label'    => esc_html__( 'Body Font 1', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -951,7 +951,7 @@ function xconnect_customize_settings() {
         ),
         'second_font'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 2', 'xconnect' ),
+            'label'    => esc_html__( 'Body Font 2', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -960,7 +960,7 @@ function xconnect_customize_settings() {
         ),
         'heading1_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 1', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 1', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -979,7 +979,7 @@ function xconnect_customize_settings() {
         ),
         'heading2_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 2', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 2', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -998,7 +998,7 @@ function xconnect_customize_settings() {
         ),
         'heading3_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 3', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 3', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1017,7 +1017,7 @@ function xconnect_customize_settings() {
         ),
         'heading4_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 4', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 4', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1036,7 +1036,7 @@ function xconnect_customize_settings() {
         ),
         'heading5_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 5', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 5', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1055,7 +1055,7 @@ function xconnect_customize_settings() {
         ),
         'heading6_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 6', 'xconnect' ),
+            'label'    => esc_html__( 'Heading 6', 'skinetic' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1076,9 +1076,9 @@ function xconnect_customize_settings() {
 		/* 404 */
 		'page_404'   	  => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'xconnect' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'xconnect' ),
-	 		'placeholder' => esc_attr__( 'Select a page 404', 'xconnect' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'skinetic' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'skinetic' ),
+	 		'placeholder' => esc_attr__( 'Select a page 404', 'skinetic' ), 
 	 		'section'     => 'error_404', 
 	 		'default'     => '', 
 			'priority'    => 3,
@@ -1087,7 +1087,7 @@ function xconnect_customize_settings() {
 		/*color scheme*/
         'bg_body'      => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Body', 'xconnect' ),
+            'label'    => esc_html__( 'Background Body', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '',
             'priority' => 10,
@@ -1100,21 +1100,21 @@ function xconnect_customize_settings() {
         ),
         'main_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Primary Color', 'xconnect' ),
+            'label'    => esc_html__( 'Primary Color', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '#0f3d3a',
             'priority' => 10,
         ),
         'heading_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Heading Color', 'xconnect' ),
+            'label'    => esc_html__( 'Heading Color', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '#191717',
             'priority' => 10,
         ),
         'btn_hover_dark'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Hover & Dark', 'xconnect' ),
+            'label'    => esc_html__( 'Button Hover & Dark', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '#191717',
             'priority' => 10,
@@ -1122,7 +1122,7 @@ function xconnect_customize_settings() {
 
         'btn_main_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Main Color', 'xconnect' ),
+            'label'    => esc_html__( 'Button Main Color', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '#BDF49D',
             'priority' => 10,
@@ -1130,7 +1130,7 @@ function xconnect_customize_settings() {
 
         'btn_dark_color'   => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Button Dark Color', 'xconnect' ),
+            'label'    => esc_html__( 'Button Dark Color', 'skinetic' ),
             'section'  => 'color_scheme',
             'default'  => '#1F4843',
             'priority' => 10,
@@ -1139,7 +1139,7 @@ function xconnect_customize_settings() {
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
-            'label'       => esc_html__( 'Code', 'xconnect' ),
+            'label'       => esc_html__( 'Code', 'skinetic' ),
             'section'     => 'script_code',
             'choices'     => [
 				'language' => 'js',
@@ -1148,11 +1148,11 @@ function xconnect_customize_settings() {
         ),
 		
 	);
-	$settings['panels']   = apply_filters( 'xconnect_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'xconnect_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'xconnect_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'skinetic_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'skinetic_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'skinetic_customize_fields', $fields );
 
 	return $settings;
 }
 
-$xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
+$skinetic_customize = new Skinetic_Customize( skinetic_customize_settings() );

@@ -14,7 +14,7 @@ class Custom_Template_Widget extends Widget_Base {
 
     // Return the widget title
     public function get_title() {
-        return __( 'Custom Template Widget', 'xconnect' );
+        return __( 'Custom Template Widget', 'skinetic' );
     }
 
     // Return the widget icon
@@ -33,7 +33,7 @@ class Custom_Template_Widget extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'xconnect' ),
+                'label' => __( 'Content', 'skinetic' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,7 +42,7 @@ class Custom_Template_Widget extends Widget_Base {
         $this->add_control(
             'template_id',
             [
-                'label' => __( 'Select Template', 'xconnect' ),
+                'label' => __( 'Select Template', 'skinetic' ),
                 'type' => Controls_Manager::SELECT2,
                 'options' => $this->get_elementor_templates(),
                 'default' => '',

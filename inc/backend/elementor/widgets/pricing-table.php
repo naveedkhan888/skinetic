@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Pricing Table
  */
-class xConnect_Pricing_Table extends Widget_Base{
+class Skinetic_Pricing_Table extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Pricing Table', 'xconnect' );
+		return __( 'XP Pricing Table', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,17 +33,17 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Pricing Table', 'xconnect' ),
+				'label' => __( 'Pricing Table', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'is_featured',
 			[
-				'label' => __( 'Pricing Table Featured', 'xconnect' ),
+				'label' => __( 'Pricing Table Featured', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xconnect' ),
-				'label_off' => __( 'No', 'xconnect' ),
+				'label_on' => __( 'Yes', 'skinetic' ),
+				'label_off' => __( 'No', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -52,9 +52,9 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Standard', 'xconnect' ),
+				'default' => __( 'Standard', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -62,9 +62,9 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price',
 			[
-				'label' => __( 'Price', 'xconnect' ),
+				'label' => __( 'Price', 'skinetic' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<sup>$</sup> 29', 'xconnect' ),
+				'default' => __( '<sup>$</sup> 29', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -72,9 +72,9 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for',
 			[
-				'label' => __( 'Text Under Price', 'xconnect' ),
+				'label' => __( 'Text Under Price', 'skinetic' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'per m2', 'xconnect' ),
+				'default' => __( 'per m2', 'skinetic' ),
 				'label_block' => true,
 			]
 		);
@@ -84,7 +84,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Short Text',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'xconnect' ),
+				'default' => __( 'Discover the emerging technologies most relevant to your strategy by working.', 'skinetic' ),
 			]
 		);
 
@@ -93,7 +93,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Details',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'xconnect' ),
+				'default' => __( '<ul><li class="active">Structure of a project</li><li class="active">Measurement of the room</li><li>3D-Visualization of premises</li></ul>', 'skinetic' ),
 			]
 		);
 
@@ -102,16 +102,16 @@ class xConnect_Pricing_Table extends Widget_Base{
 			[
 				'label' => 'Button',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Choose Plane', 'xconnect' ),
+				'default' => __( 'Choose Plane', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'xconnect' ),
+				'label' => __( 'Link', 'skinetic' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'xconnect' ),
+				'placeholder' => __( 'https://your-link.com', 'skinetic' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -124,14 +124,14 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_table_section',
 			[
-				'label' => __( 'Table', 'xconnect' ),
+				'label' => __( 'Table', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'xconnect' ),
+				'label' => __( 'Padding Box', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -142,7 +142,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -153,7 +153,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -182,7 +182,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -191,7 +191,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -199,7 +199,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -215,7 +215,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -226,7 +226,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'title_bgcolor',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price',
 			[
-				'label' => __( 'Price', 'xconnect' ),
+				'label' => __( 'Price', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -254,7 +254,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'price_space',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -270,7 +270,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -290,7 +290,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_price_for',
 			[
-				'label' => __( 'Under Price', 'xconnect' ),
+				'label' => __( 'Under Price', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -298,7 +298,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'price_for_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -319,7 +319,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_stext',
 			[
-				'label' => __( 'Short Text', 'xconnect' ),
+				'label' => __( 'Short Text', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -327,7 +327,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'stext_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -343,7 +343,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'stext_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -363,7 +363,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Details', 'xconnect' ),
+				'label' => __( 'Details', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -371,7 +371,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_responsive_control(
 			'des_padding',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -387,7 +387,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_border_color',
 			[
-				'label' => __( 'Line Color', 'xconnect' ),
+				'label' => __( 'Line Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -409,7 +409,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'des_active_color',
 			[
-				'label' => __( 'Active Color', 'xconnect' ),
+				'label' => __( 'Active Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -427,10 +427,10 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'icon_list',
 			[
-				'label' => __( 'Icon List', 'xconnect' ),
+				'label' => __( 'Icon List', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xconnect' ),
-				'label_off' => __( 'No', 'xconnect' ),
+				'label_on' => __( 'Yes', 'skinetic' ),
+				'label_off' => __( 'No', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -440,7 +440,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'xconnect' ),
+				'label' => __( 'Button', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -464,7 +464,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'xconnect' ),
+				'label' => __( 'Normal', 'skinetic' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -474,7 +474,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xconnect' ),
+				'label' => __( 'Background Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -488,7 +488,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -502,7 +502,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'xconnect' ),
+				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -518,7 +518,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'xconnect' ),
+				'label' => __( 'Hover', 'skinetic' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -527,7 +527,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'xconnect' ),
+				'label' => __( 'Background Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -541,7 +541,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -555,7 +555,7 @@ class xConnect_Pricing_Table extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'xconnect' ),
+				'label' => __( 'Border Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -611,5 +611,5 @@ class xConnect_Pricing_Table extends Widget_Base{
 	}
 
 }
-// After the xConnect_Pricing_Table class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Pricing_Table() );
+// After the Skinetic_Pricing_Table class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Pricing_Table() );

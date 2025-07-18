@@ -1,9 +1,9 @@
 <wpml-config>
   <custom-fields>
-    <custom-field action="copy">xconnect_options</custom-field>
+    <custom-field action="copy">skinetic_options</custom-field>
   </custom-fields>
   <admin-texts>
-    <key name="xconnect_options">
+    <key name="skinetic_options">
       <key name="sidebar_widgets"/>
       <key name="widgets_above_page"/>
       <key name="widgets_above_content"/>

@@ -18,7 +18,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
     // The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
     public function get_title()
     {
-        return __('XP Service Carousel', 'xconnect');
+        return __('XP Service Carousel', 'skinetic');
     }
 
     // The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -30,7 +30,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
     // The get_categories method, lets you set the category of the widget, return the category name as a string.
     public function get_categories()
     {
-        return ['category_xconnect'];
+        return ['category_skinetic'];
     }
 
     protected function register_controls()
@@ -40,25 +40,25 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __('Image Box', 'xconnect'),
+                'label' => __('Image Box', 'skinetic'),
             ]
         );
         $this->add_responsive_control(
             'align',
             [
-                'label' => __('Alignment', 'xconnect'),
+                'label' => __('Alignment', 'skinetic'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __('Left', 'xconnect'),
+                        'title' => __('Left', 'skinetic'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'xconnect'),
+                        'title' => __('Center', 'skinetic'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'xconnect'),
+                        'title' => __('Right', 'skinetic'),
                         'icon' => 'eicon-text-align-right',
                     ]
                 ],
@@ -71,7 +71,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'image_box',
             [
-                'label' => __('Image', 'xconnect'),
+                'label' => __('Image', 'skinetic'),
                 'type' => Controls_Manager::MEDIA,
             ]
         );
@@ -79,7 +79,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'title_box',
             [
-                'label' => __('Title', 'xconnect'),
+                'label' => __('Title', 'skinetic'),
                 'type' => Controls_Manager::TEXTAREA,
                 'default' => 'Service Title',
             ]
@@ -88,9 +88,9 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'link_box',
             [
-                'label' => __('Link', 'xconnect'),
+                'label' => __('Link', 'skinetic'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __('https://your-link.com', 'xconnect'),
+                'placeholder' => __('https://your-link.com', 'skinetic'),
                 'default' => [
                     'url' => '#'
                 ],
@@ -119,7 +119,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'header_size',
             [
-                'label' => __('Title HTML Tag', 'xconnect'),
+                'label' => __('Title HTML Tag', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -143,10 +143,10 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'tshow',
             [
-                'label' => __('Slides To Show', 'xconnect'),
+                'label' => __('Slides To Show', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    '' => __('Default', 'xconnect'),
+                    '' => __('Default', 'skinetic'),
                 ] + $slides_show,
                 'default' => '',
                 'separator' => 'before',
@@ -155,31 +155,31 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'loop',
             [
-                'label' => __('Loop', 'xconnect'),
+                'label' => __('Loop', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'false',
                 'options' => [
-                    'true' => __('Yes', 'xconnect'),
-                    'false' => __('No', 'xconnect'),
+                    'true' => __('Yes', 'skinetic'),
+                    'false' => __('No', 'skinetic'),
                 ]
             ]
         );
         $this->add_control(
             'autoplay',
             [
-                'label' => __('Autoplay', 'xconnect'),
+                'label' => __('Autoplay', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'true',
                 'options' => [
-                    'true' => __('Yes', 'xconnect'),
-                    'false' => __('No', 'xconnect'),
+                    'true' => __('Yes', 'skinetic'),
+                    'false' => __('No', 'skinetic'),
                 ]
             ]
         );
         $this->add_control(
             'timeout',
             [
-                'label' => __('Autoplay Timeout', 'xconnect'),
+                'label' => __('Autoplay Timeout', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -199,31 +199,31 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrows',
             [
-                'label' => __('Arrows', 'xconnect'),
+                'label' => __('Arrows', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'false',
                 'options' => [
-                    'true'   => __('Yes', 'xconnect'),
-                    'false'  => __('No', 'xconnect'),
+                    'true'   => __('Yes', 'skinetic'),
+                    'false'  => __('No', 'skinetic'),
                 ],
             ]
         );
         $this->add_control(
             'dots',
             [
-                'label' => __('Dots', 'xconnect'),
+                'label' => __('Dots', 'skinetic'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'true',
                 'options' => [
-                    'true'   => __('Yes', 'xconnect'),
-                    'false'  => __('No', 'xconnect'),
+                    'true'   => __('Yes', 'skinetic'),
+                    'false'  => __('No', 'skinetic'),
                 ],
             ]
         );
         $this->add_responsive_control(
             'w_gaps',
             [
-                'label' => __('Gap Width', 'xconnect'),
+                'label' => __('Gap Width', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -241,7 +241,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __('Content', 'xconnect'),
+                'label' => __('Content', 'skinetic'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -251,7 +251,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_image_overlay',
             [
-                'label' => __('Image Overlay', 'xconnect'),
+                'label' => __('Image Overlay', 'skinetic'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -262,7 +262,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
             Group_Control_Background::get_type(),
             [
                 'name' => 'overlay_background',
-                'label' => __('Overlay Color', 'xconnect'),
+                'label' => __('Overlay Color', 'skinetic'),
                 'types' => ['gradient'],
                 'selector' => '{{WRAPPER}} .xpic-card .overlay',
                 'default' => 'gradient',
@@ -285,7 +285,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
             Group_Control_Background::get_type(),
             [
                 'name' => 'overlay_hover_background',
-                'label' => __('Overlay Hover Color', 'xconnect'),
+                'label' => __('Overlay Hover Color', 'skinetic'),
                 'types' => ['gradient'],
                 'selector' => '{{WRAPPER}} .xpic-card:hover .overlay',
                 'default' => 'gradient',
@@ -306,7 +306,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'overlay_position',
             [
-                'label' => __('Overlay Position', 'xconnect'),
+                'label' => __('Overlay Position', 'skinetic'),
                 'type' => Controls_Manager::HIDDEN,
                 'default' => '',
                 'selectors' => [
@@ -320,7 +320,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'overlay_transition',
             [
-                'label' => __('Overlay Transition', 'xconnect'),
+                'label' => __('Overlay Transition', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -344,14 +344,14 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_gereral',
             [
-                'label' => __('Gereral', 'xconnect'),
+                'label' => __('Gereral', 'skinetic'),
                 'type' => Controls_Manager::HEADING,
             ]
         );
         $this->add_control(
             'box_bg',
             [
-                'label' => __('Background', 'xconnect'),
+                'label' => __('Background', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -362,7 +362,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'box_padding',
             [
-                'label' => __('Padding Box', 'xconnect'),
+                'label' => __('Padding Box', 'skinetic'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -373,7 +373,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'radius_box',
             [
-                'label' => __('Border Radius', 'xconnect'),
+                'label' => __('Border Radius', 'skinetic'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -393,7 +393,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_title',
             [
-                'label' => __('Title', 'xconnect'),
+                'label' => __('Title', 'skinetic'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -401,7 +401,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'title_space',
             [
-                'label' => __('Spacing', 'xconnect'),
+                'label' => __('Spacing', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -417,7 +417,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'title_color',
             [
-                'label' => __('Color', 'xconnect'),
+                'label' => __('Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -429,7 +429,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'title_hcolor',
             [
-                'label' => __('Hover Color', 'xconnect'),
+                'label' => __('Hover Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -451,7 +451,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_btn',
             [
-                'label' => __('Button', 'xconnect'),
+                'label' => __('Button', 'skinetic'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -473,7 +473,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_tab(
             'tab_btn_normal',
             [
-                'label' => __('Normal', 'xconnect'),
+                'label' => __('Normal', 'skinetic'),
                 'condition' => [
                     'label_link!' => '',
                 ],
@@ -483,7 +483,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_bg_color',
             [
-                'label' => __('Background Color', 'xconnect'),
+                'label' => __('Background Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -497,7 +497,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_color',
             [
-                'label' => __('Color', 'xconnect'),
+                'label' => __('Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -511,7 +511,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_bcolor',
             [
-                'label' => __('Border Color', 'xconnect'),
+                'label' => __('Border Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -527,7 +527,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_tab(
             'tab_btn_hover',
             [
-                'label' => __('Hover', 'xconnect'),
+                'label' => __('Hover', 'skinetic'),
                 'condition' => [
                     'label_link!' => '',
                 ],
@@ -536,7 +536,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'hover_btn_bg_color',
             [
-                'label' => __('Background Color', 'xconnect'),
+                'label' => __('Background Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -550,7 +550,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'hover_btn_color',
             [
-                'label' => __('Color', 'xconnect'),
+                'label' => __('Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -571,7 +571,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'navigation_section',
             [
-                'label' => __('Dots', 'xconnect'),
+                'label' => __('Dots', 'skinetic'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'dots' => 'true',
@@ -582,7 +582,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'dots_spacing',
             [
-                'label' => __('Spacing', 'xconnect'),
+                'label' => __('Spacing', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -599,7 +599,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'dots_bgcolor',
             [
-                'label' => __('Color', 'xconnect'),
+                'label' => __('Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -610,7 +610,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __('Color Active', 'xconnect'),
+                'label' => __('Color Active', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -624,7 +624,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'style_nav',
             [
-                'label' => __('Arrows', 'xconnect'),
+                'label' => __('Arrows', 'skinetic'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'arrows' => 'true',
@@ -634,7 +634,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'arrow_spacing',
             [
-                'label' => __('Spacing', 'xconnect'),
+                'label' => __('Spacing', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -651,7 +651,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'arrow_width',
             [
-                'label' => __('Width', 'xconnect'),
+                'label' => __('Width', 'skinetic'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -667,7 +667,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_color',
             [
-                'label' => __('Color', 'xconnect'),
+                'label' => __('Color', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -679,7 +679,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_bg_color',
             [
-                'label' => __('Background', 'xconnect'),
+                'label' => __('Background', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -690,7 +690,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_hcolor',
             [
-                'label' => __('Color Hover', 'xconnect'),
+                'label' => __('Color Hover', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -701,7 +701,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_bg_hcolor',
             [
-                'label' => __('Background Hover', 'xconnect'),
+                'label' => __('Background Hover', 'skinetic'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -712,7 +712,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'radius_arrow',
             [
-                'label' => __('Border Radius', 'xconnect'),
+                'label' => __('Border Radius', 'skinetic'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [

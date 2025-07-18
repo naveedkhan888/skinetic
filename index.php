@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 get_header();
@@ -18,8 +18,8 @@ get_header();
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php xconnect_content_columns(); ?>">
-				<main id="main" class="site-main <?php xconnect_blog_style(); ?>">
+			<div id="primary" class="content-area <?php skinetic_content_columns(); ?>">
+				<main id="main" class="site-main <?php skinetic_blog_style(); ?>">
 
 				<?php
 				if ( have_posts() ) :
@@ -47,7 +47,7 @@ get_header();
 				?>
 
 				</main><!-- #main -->
-				<?php xconnect_posts_navigation(); ?>
+				<?php skinetic_posts_navigation(); ?>
 			</div><!-- #primary -->
 
 			<?php get_sidebar(); ?>

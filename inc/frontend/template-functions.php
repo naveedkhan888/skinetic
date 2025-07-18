@@ -2,24 +2,24 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 /** 
  * Add body class by filter 
  * 
  */
-add_filter( 'body_class', 'xconnect_body_class_names', 999 );
-function xconnect_body_class_names( $classes ) {
+add_filter( 'body_class', 'skinetic_body_class_names', 999 );
+function skinetic_body_class_names( $classes ) {
 	
 	$theme = wp_get_theme();
 	if( is_child_theme() ) { $theme = wp_get_theme()->parent(); }
 
-  	$classes[] = 'xconnect-theme-ver-'.$theme->version;
+  	$classes[] = 'skinetic-theme-ver-'.$theme->version;
 
   	$classes[] = 'wordpress-version-'.get_bloginfo( 'version' );
 
-  	if ( xconnect_get_option('footer_fixed') != false ){
+  	if ( skinetic_get_option('footer_fixed') != false ){
 		$classes[] = 'footer-fixed';
 	}
 
@@ -29,11 +29,11 @@ function xconnect_body_class_names( $classes ) {
 /**
  *  Add specific CSS class to header
  */
-function xconnect_header_class() {
+function skinetic_header_class() {
 
 	$header_classes = '';
 
-	if ( xconnect_get_option('header_fixed') != false ){
+	if ( skinetic_get_option('header_fixed') != false ){
 		$header_classes = 'header-transparent';
 	}else{
 		$header_classes = 'header-static';
@@ -52,23 +52,23 @@ function xconnect_header_class() {
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function xconnect_pingback_header() {
+function skinetic_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'xconnect_pingback_header' );
+add_action( 'wp_head', 'skinetic_pingback_header' );
 
 //Get layout post & page.
-if ( ! function_exists( 'xconnect_get_layout' ) ) :
-	function xconnect_get_layout() {
+if ( ! function_exists( 'skinetic_get_layout' ) ) :
+	function skinetic_get_layout() {
 		// Get layout.
 		if( is_page() && !is_home() && function_exists( 'rwmb_meta' ) ) {
 			$page_layout = rwmb_meta('page_layout');
 		}elseif( is_single() ){
-			$page_layout = xconnect_get_option( 'single_post_layout' );
+			$page_layout = skinetic_get_option( 'single_post_layout' );
 		}else{
-			$page_layout = xconnect_get_option( 'blog_layout' );
+			$page_layout = skinetic_get_option( 'blog_layout' );
 		}
 
 		return $page_layout;
@@ -82,15 +82,15 @@ endif;
  *
  * @global int $content_width
  */
-if ( ! function_exists( 'xconnect_content_columns' ) ) :
-	function xconnect_content_columns() {
+if ( ! function_exists( 'skinetic_content_columns' ) ) :
+	function skinetic_content_columns() {
 
 		$blog_content_width = array();
 
 		// Check if layout is one column.
-		if ( 'content-sidebar' === xconnect_get_layout() && is_active_sidebar( 'primary' ) ) {
+		if ( 'content-sidebar' === skinetic_get_layout() && is_active_sidebar( 'primary' ) ) {
 			$blog_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12';
-		}elseif ('sidebar-content' === xconnect_get_layout() && is_active_sidebar( 'primary' ) ) {
+		}elseif ('sidebar-content' === skinetic_get_layout() && is_active_sidebar( 'primary' ) ) {
 			$blog_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12 pull-right';
 		}else{
 			$blog_content_width[] = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -102,15 +102,15 @@ if ( ! function_exists( 'xconnect_content_columns' ) ) :
 endif;
 
 /* Select blog style */
-if ( ! function_exists( 'xconnect_blog_style' ) ) :
-	function xconnect_blog_style() {
+if ( ! function_exists( 'skinetic_blog_style' ) ) :
+	function skinetic_blog_style() {
 
 		$blog_style = array();
 
 		// Check if layout is one column.
-		if ( xconnect_get_option( 'blog_style' ) === 'grid' ) {
+		if ( skinetic_get_option( 'blog_style' ) === 'grid' ) {
 			$blog_style[] = 'blog-grid';
-			$blog_style[] = xconnect_get_option( 'blog_columns' );
+			$blog_style[] = skinetic_get_option( 'blog_columns' );
 		} else {
 			$blog_style[] = 'blog-list';
 		}
@@ -123,24 +123,24 @@ endif;
 /**
  * Portfolio Columns
  */
-if ( ! function_exists( 'xconnect_portfolio_option_class' ) ) :
-	function xconnect_portfolio_option_class() {
+if ( ! function_exists( 'skinetic_portfolio_option_class' ) ) :
+	function skinetic_portfolio_option_class() {
 
 		$portfolio_option_class = array();
 
-		if( xconnect_get_option('portfolio_column') == "2cl" ){
+		if( skinetic_get_option('portfolio_column') == "2cl" ){
 			$portfolio_option_class[] = 'pf_2_cols';
-		}elseif( xconnect_get_option('portfolio_column') == "4cl" ) {
+		}elseif( skinetic_get_option('portfolio_column') == "4cl" ) {
 			$portfolio_option_class[] = 'pf_4_cols';
-		}elseif( xconnect_get_option('portfolio_column') == "5cl" ) {
+		}elseif( skinetic_get_option('portfolio_column') == "5cl" ) {
 			$portfolio_option_class[] = 'pf_5_cols';
 		}else{
 			$portfolio_option_class[] = '';
 		}
 
-		if( xconnect_get_option('portfolio_style') == "style2" ) {
+		if( skinetic_get_option('portfolio_style') == "style2" ) {
 			$portfolio_option_class[] = 'style-2';
-		}elseif( xconnect_get_option('portfolio_style') == "style3" ) {
+		}elseif( skinetic_get_option('portfolio_style') == "style3" ) {
 			$portfolio_option_class[] = 'style-3';
 		}else{
 			$portfolio_option_class[] = 'style-1';
@@ -157,8 +157,8 @@ endif;
  * @param object $query data
  *
  */
-function xconnect_change_portfolio_posts_per_page( $query ) {
-	$portfolio_ppp = (!empty( xconnect_get_option('portfolio_posts_per_page') ) ? xconnect_get_option('portfolio_posts_per_page') : '6');
+function skinetic_change_portfolio_posts_per_page( $query ) {
+	$portfolio_ppp = (!empty( skinetic_get_option('portfolio_posts_per_page') ) ? skinetic_get_option('portfolio_posts_per_page') : '6');
 
 	if ( !is_singular() && !is_admin() ) {		
 	    if ( $query->is_post_type_archive( 'xp_portfolio' ) || $query->is_tax('portfolio_cat') && ! is_admin() && $query->is_main_query() ) {
@@ -167,32 +167,32 @@ function xconnect_change_portfolio_posts_per_page( $query ) {
 	}
     return $query;
 }
-add_filter( 'pre_get_posts', 'xconnect_change_portfolio_posts_per_page' );
+add_filter( 'pre_get_posts', 'skinetic_change_portfolio_posts_per_page' );
 
 /**
  * Load More Ajax Portfolio
  */
-add_action( 'wp_enqueue_scripts', 'xconnect_script_and_styles', 1 );
-function xconnect_script_and_styles() {
+add_action( 'wp_enqueue_scripts', 'skinetic_script_and_styles', 1 );
+function skinetic_script_and_styles() {
 	global $wp_query;
 
 	// register our main script but do not enqueue it yet
-	wp_register_script( 'xconnect_scripts', get_template_directory_uri() . '/js/myloadmore.js', array('jquery'), time() );
+	wp_register_script( 'skinetic_scripts', get_template_directory_uri() . '/js/myloadmore.js', array('jquery'), time() );
 
 	// now the most interesting part
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
 	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
-	wp_localize_script( 'xconnect_scripts', 'xconnect_loadmore_params', array(
+	wp_localize_script( 'skinetic_scripts', 'skinetic_loadmore_params', array(
 		'ajaxurl' => home_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
 	) );
 
- 	wp_enqueue_script( 'xconnect_scripts' );
+ 	wp_enqueue_script( 'skinetic_scripts' );
 }
 
-add_action('wp_ajax_loadmore', 'xconnect_loadmore_ajax_handler'); // wp_ajax_{action}
-add_action('wp_ajax_nopriv_loadmore', 'xconnect_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+add_action('wp_ajax_loadmore', 'skinetic_loadmore_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmore', 'skinetic_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
-function xconnect_loadmore_ajax_handler(){
+function skinetic_loadmore_ajax_handler(){
 	$offset  = (isset($_POST['offset'])) ? $_POST['offset'] : 0;
 	$cat     = (isset($_POST['cat'])) ? $_POST['cat'] : 0;
 	$ppp     = (isset($_POST['ppp'])) ? $_POST['ppp'] : 3;
@@ -233,31 +233,31 @@ function xconnect_loadmore_ajax_handler(){
 /**
  * Back-To-Top on Footer
  */
-if( !function_exists('xconnect_custom_back_to_top') ) {
-    function xconnect_custom_back_to_top() {     
-	    if( xconnect_get_option('backtotop') != false ){
+if( !function_exists('skinetic_custom_back_to_top') ) {
+    function skinetic_custom_back_to_top() {     
+	    if( skinetic_get_option('backtotop') != false ){
 	    	echo '<a id="back-to-top" href="#" class="show"><i class="xp-webicon-left-arrow-2"></i></a>';
 	    }
     }
 }
-add_action('wp_footer', 'xconnect_custom_back_to_top');
+add_action('wp_footer', 'skinetic_custom_back_to_top');
 
 /**
  * Google Analytics
  */
-if ( ! function_exists( 'xconnect_hook_javascript' ) ) {
-	function xconnect_hook_javascript() {
-		if ( xconnect_get_option('js_code') != '' ) {
+if ( ! function_exists( 'skinetic_hook_javascript' ) ) {
+	function skinetic_hook_javascript() {
+		if ( skinetic_get_option('js_code') != '' ) {
 	    ?>
 	    	<!-- Google Analytics code -->
 	    	<script type="text/javascript">
-	            <?php echo xconnect_get_option('js_code'); ?>
+	            <?php echo skinetic_get_option('js_code'); ?>
 	        </script>
 	    <?php
 	    }
 	}
 }
-add_action('wp_head', 'xconnect_hook_javascript');
+add_action('wp_head', 'skinetic_hook_javascript');
 
 /**
  * Render date-time in Copyright

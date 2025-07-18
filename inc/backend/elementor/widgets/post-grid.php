@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Post Grid
  */
-class xConnect_Post_Grid extends Widget_Base {
+class Skinetic_Post_Grid extends Widget_Base {
 
  	public function get_name() {
 		return 'ipostgrid';
 	}
 
 	public function get_title() {
-		return __( 'XP Post Grid', 'xconnect' );
+		return __( 'XP Post Grid', 'skinetic' );
 	}
 
 	public function get_icon() {
@@ -20,7 +20,7 @@ class xConnect_Post_Grid extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -28,24 +28,24 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Posts', 'xconnect' ),
+				'label' => __( 'Posts', 'skinetic' ),
 			]
 		);
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'xconnect' ),
+				'label' => __( 'Select Categories', 'skinetic' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'xconnect' ),
+				'placeholder' => __( 'All Categories', 'skinetic' ),
 			]
 		);
 		$this->add_control(
 			'post_num',
 			[
-				'label' => __( 'Show Number Posts', 'xconnect' ),
+				'label' => __( 'Show Number Posts', 'skinetic' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 			]
@@ -53,7 +53,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'exc',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'xconnect' ),
+				'label' => esc_html__( 'Excerpt Length', 'skinetic' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '0',
 			]
@@ -61,12 +61,12 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'post_thumbnail',
 			[
-				'label' => __( 'Thumbnail Image Size', 'xconnect' ),
+				'label' => __( 'Thumbnail Image Size', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'xconnect-post-thumbnail-grid',
+				'default' => 'skinetic-post-thumbnail-grid',
 				'options' => [
-					'xconnect-post-thumbnail-grid' => __( 'Default', 'xconnect' ),
-					'full' => __( 'Full', 'xconnect' ),
+					'skinetic-post-thumbnail-grid' => __( 'Default', 'skinetic' ),
+					'full' => __( 'Full', 'skinetic' ),
 				],
 			]
 		);
@@ -75,7 +75,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_grid',
 			[
-				'label' => __( 'Grid', 'xconnect' ),
+				'label' => __( 'Grid', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -84,7 +84,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'xconnect' ),
+				'label' => __( 'Columns', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -103,7 +103,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'grid_gap',
 			[
-				'label' => __( 'Grid Gap', 'xconnect' ),
+				'label' => __( 'Grid Gap', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -126,7 +126,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'posts_style',
 			[
-				'label' => __( 'Post Items', 'xconnect' ),
+				'label' => __( 'Post Items', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,7 +134,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'xconnect' ),
+				'label' => __( 'General', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -155,7 +155,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -185,7 +185,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -197,7 +197,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'xconnect' ),
+				'label' => __( 'Hover Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_excerpt',
 			[
-				'label' => __( 'Excerpt', 'xconnect' ),
+				'label' => __( 'Excerpt', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -227,7 +227,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -248,7 +248,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'xconnect' ),
+				'label' => __( 'Category', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -257,10 +257,10 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'xconnect' ),
+				'label' => __( 'Show Category', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xconnect' ),
-				'label_off' => __( 'Hide', 'xconnect' ),
+				'label_on' => __( 'Show', 'skinetic' ),
+				'label_off' => __( 'Hide', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -269,7 +269,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Meta', 'xconnect' ),
+				'label' => __( 'Meta', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -309,7 +309,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class xConnect_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_hover_color',
 			[
-				'label' => __( 'Hover Color', 'xconnect' ),
+				'label' => __( 'Hover Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -369,7 +369,7 @@ class xConnect_Post_Grid extends Widget_Base {
 					<div class="post-inner">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<div class="entry-media">
-								<?php if( $settings['show_cat'] ) { xconnect_posted_in(); } ?>
+								<?php if( $settings['show_cat'] ) { skinetic_posted_in(); } ?>
 								<a href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 								</a>
@@ -377,15 +377,15 @@ class xConnect_Post_Grid extends Widget_Base {
 						<?php } ?>
 
 						<div class="inner-post">
-							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) xconnect_posted_in(); ?>
+							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) skinetic_posted_in(); ?>
 							<div class="entry-header">
 								<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 							</div>
 
-							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .xconnect_excerpt($settings['exc']). '...</div>'; } ?>
+							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .skinetic_excerpt($settings['exc']). '...</div>'; } ?>
 						</div>
 						<div class="entry-meta">
-							<?php if( xconnect_get_option( 'post_entry_meta' ) ) { xconnect_post_meta(); } ?>
+							<?php if( skinetic_get_option( 'post_entry_meta' ) ) { skinetic_post_meta(); } ?>
 							<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 						</div>
 					</div>
@@ -409,4 +409,4 @@ class xConnect_Post_Grid extends Widget_Base {
 	}
 }
 // Register the widget
-Plugin::instance()->widgets_manager->register( new xConnect_Post_Grid() );
+Plugin::instance()->widgets_manager->register( new Skinetic_Post_Grid() );

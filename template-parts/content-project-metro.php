@@ -2,7 +2,7 @@
 /**
  * Template part for displaying widget Portfolio Filter Metro
  *
- * @package xConnect
+ * @package Skinetic
  */
 ?>
 <?php 
@@ -25,11 +25,11 @@
 				<?php
 					if ( has_post_thumbnail() ) {
 						if( $thumb == 'double_w' ){
-							the_post_thumbnail( 'xconnect-portfolio-thumbnail-grid-wdouble' );
+							the_post_thumbnail( 'skinetic-portfolio-thumbnail-grid-wdouble' );
 						}elseif( $thumb == 'double_wh' ){
-							the_post_thumbnail( 'xconnect-portfolio-thumbnail-grid-whdouble' );
+							the_post_thumbnail( 'skinetic-portfolio-thumbnail-grid-whdouble' );
 						}else{
-							the_post_thumbnail( 'xconnect-portfolio-thumbnail-grid' );
+							the_post_thumbnail( 'skinetic-portfolio-thumbnail-grid' );
 						}
 					}
 				?>

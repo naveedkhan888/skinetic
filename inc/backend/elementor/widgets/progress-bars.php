@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Progress Bars 
  */
-class xConnect_Progress_Bars extends Widget_Base{
+class Skinetic_Progress_Bars extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Progress Bars', 'xconnect' );
+		return __( 'XP Progress Bars', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,19 +33,19 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'xconnect' ),
+				'label' => __( 'Content', 'skinetic' ),
 			]
 		);
 
 		$this->add_control(
 			'bar_style',
 			[
-				'label' 	=> __( 'Bar Style', 'xconnect' ),
+				'label' 	=> __( 'Bar Style', 'skinetic' ),
 				'type'  	=> Controls_Manager::SELECT,
 				'default' 	=> 'line',
 				'options' 	=> [
-					'line'    => __( 'Style 1: Line', 'xconnect' ),
-					'circle'  => __( 'Style 2: Circle', 'xconnect' ),
+					'line'    => __( 'Style 1: Line', 'skinetic' ),
+					'circle'  => __( 'Style 2: Circle', 'skinetic' ),
 				]
 			]
 		);
@@ -55,7 +55,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 			[
 				'label' => 'Title',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Keyword Research', 'xconnect' ),
+				'default' => __( 'Keyword Research', 'skinetic' ),
 			]
 		);
 		$this->add_control(
@@ -72,7 +72,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'percent_text',
 			[
-				'label'   => esc_html__( 'Show Percent Text', 'xconnect' ),
+				'label'   => esc_html__( 'Show Percent Text', 'skinetic' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -80,19 +80,19 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xconnect' ),
+				'label' => __( 'Alignment', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xconnect' ),
+						'title' => __( 'Left', 'skinetic' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xconnect' ),
+						'title' => __( 'Center', 'skinetic' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xconnect' ),
+						'title' => __( 'Right', 'skinetic' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -112,14 +112,14 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'bar_style_section',
 			[
-				'label' => __( 'Progress Bar', 'xconnect' ),
+				'label' => __( 'Progress Bar', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bar_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -130,7 +130,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bar_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#0f3d3a',
 				'condition' => [
@@ -141,7 +141,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_height',
 			[
-				'label' => __( 'Height', 'xconnect' ),
+				'label' => __( 'Height', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -160,7 +160,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'bar_size',
 			[
-				'label' => __( 'Circle Width', 'xconnect' ),
+				'label' => __( 'Circle Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -179,7 +179,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'lbar_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#0f3d3a',
 				'selectors' => [
@@ -193,7 +193,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'bg_color',
 			[
-				'label' => __( 'Line Color', 'xconnect' ),
+				'label' => __( 'Line Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -205,7 +205,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'line_height_circle',
 			[
-				'label' => __( 'Line Height', 'xconnect' ),
+				'label' => __( 'Line Height', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -222,7 +222,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'radius_line',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -244,7 +244,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->start_controls_section(
 			'style_text_section',
 			[
-				'label' => __( 'Text', 'xconnect' ),
+				'label' => __( 'Text', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -253,14 +253,14 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -277,7 +277,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -297,7 +297,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'heading_percent',
 			[
-				'label' => __( 'Percent', 'xconnect' ),
+				'label' => __( 'Percent', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -305,7 +305,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -316,7 +316,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_control(
 			'per_bg',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -334,7 +334,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 		$this->add_responsive_control(
 			'per_width',
 			[
-				'label' => __( 'Width', 'xconnect' ),
+				'label' => __( 'Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -385,5 +385,5 @@ class xConnect_Progress_Bars extends Widget_Base{
 		return [ 'circle', 'percent' ];
 	}
 }
-// After the xConnect_Progress_Bars class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Progress_Bars() );
+// After the Skinetic_Progress_Bars class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Progress_Bars() );

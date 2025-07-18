@@ -13,7 +13,7 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'xconnect-portfolio-thumbnail-grid' );
+						the_post_thumbnail( 'skinetic-portfolio-thumbnail-grid' );
 					}
 				?>
 			</a>

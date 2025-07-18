@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 get_header();
@@ -13,7 +13,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 	<div class="entry-content">
 		<div class="container">
 			<div class="row">
-				<div id="primary" class="content-area <?php xconnect_content_columns(); ?>">
+				<div id="primary" class="content-area <?php skinetic_content_columns(); ?>">
 					<main id="main" class="site-main">
 						
 					<?php

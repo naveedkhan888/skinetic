@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Button with Icon
  */
-class xConnect_Button extends Widget_Base {
+class Skinetic_Button extends Widget_Base {
 
     public function get_name() {
         return 'ibutton';
     }
 
     public function get_title() {
-        return __( 'XP Button', 'xconnect' );
+        return __( 'XP Button', 'skinetic' );
     }
 
     public function get_icon() {
@@ -20,15 +20,15 @@ class xConnect_Button extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_xconnect' ];
+        return [ 'category_skinetic' ];
     }
 
     public static function get_button_color() {
         return [
-            'main'   => __( 'Main Color', 'xconnect' ),
-            'dark'   => __( 'Dark Color', 'xconnect' ),
-            'light'  => __( 'Light Color', 'xconnect' ),
-            'border' => __( 'Border Color', 'xconnect' ),
+            'main'   => __( 'Main Color', 'skinetic' ),
+            'dark'   => __( 'Dark Color', 'skinetic' ),
+            'light'  => __( 'Light Color', 'skinetic' ),
+            'border' => __( 'Border Color', 'skinetic' ),
         ];
     }
 
@@ -37,30 +37,30 @@ class xConnect_Button extends Widget_Base {
         $this->start_controls_section(
             'button_section',
             [
-                'label' => __( 'Button', 'xconnect' ),
+                'label' => __( 'Button', 'skinetic' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'xconnect' ),
+                'label' => __( 'Alignment', 'skinetic' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'xconnect' ),
+                        'title' => __( 'Left', 'skinetic' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'xconnect' ),
+                        'title' => __( 'Center', 'skinetic' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'xconnect' ),
+                        'title' => __( 'Right', 'skinetic' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                     'justify' => [
-                        'title' => __( 'Justify', 'xconnect' ),
+                        'title' => __( 'Justify', 'skinetic' ),
                         'icon' => 'eicon-text-align-justify',
                     ],
                 ],
@@ -72,7 +72,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'btn_style',
             [
-                'label' => __( 'Style Color', 'xconnect' ),
+                'label' => __( 'Style Color', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'main',
                 'options' => self::get_button_color(),
@@ -83,9 +83,9 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'text',
             [
-                'label' => __( 'Label', 'xconnect' ),
+                'label' => __( 'Label', 'skinetic' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Click here', 'xconnect' ),
+                'default' => __( 'Click here', 'skinetic' ),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -96,7 +96,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'selected_icon',
             [
-                'label' => __( 'Icon', 'xconnect' ),
+                'label' => __( 'Icon', 'skinetic' ),
                 'type' => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
                 'skin' => 'inline',
@@ -107,12 +107,12 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'icon_position',
             [
-                'label' => __( 'Icon Position', 'xconnect' ),
+                'label' => __( 'Icon Position', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'left',
                 'options' => [
-                    'left' => __( 'Before', 'xconnect' ),
-                    'right' => __( 'After', 'xconnect' ),
+                    'left' => __( 'Before', 'skinetic' ),
+                    'right' => __( 'After', 'skinetic' ),
                 ],
                 'condition' => [
                     'selected_icon[value]!' => '',
@@ -123,7 +123,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'icon_spacing',
             [
-                'label' => __( 'Icon Spacing', 'xconnect' ),
+                'label' => __( 'Icon Spacing', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -143,9 +143,9 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'xconnect' ),
+                'label' => __( 'Link', 'skinetic' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'xconnect' ),
+                'placeholder' => __( 'https://your-link.com', 'skinetic' ),
                 'default' => [
                     'url' => '#',
                 ],
@@ -161,7 +161,7 @@ class xConnect_Button extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'General', 'xconnect' ),
+                'label' => __( 'General', 'skinetic' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -181,7 +181,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'button_radius',
             [
-                'label' => __( 'Border Radius', 'xconnect' ),
+                'label' => __( 'Border Radius', 'skinetic' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -202,7 +202,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'icon_size',
             [
-                'label' => __( 'Icon Size', 'xconnect' ),
+                'label' => __( 'Icon Size', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -226,14 +226,14 @@ class xConnect_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_normal',
             [
-                'label' => __( 'Normal', 'xconnect' ),
+                'label' => __( 'Normal', 'skinetic' ),
             ]
         );
 
         $this->add_control(
             'button_text_color',
             [
-                'label' => __( 'Text Color', 'xconnect' ),
+                'label' => __( 'Text Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -246,7 +246,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'btn_bg',
             [
-                'label' => __( 'Background Color', 'xconnect' ),
+                'label' => __( 'Background Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -267,14 +267,14 @@ class xConnect_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_hover',
             [
-                'label' => __( 'Hover', 'xconnect' ),
+                'label' => __( 'Hover', 'skinetic' ),
             ]
         );
 
         $this->add_control(
             'hover_color',
             [
-                'label' => __( 'Text Color', 'xconnect' ),
+                'label' => __( 'Text Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -286,7 +286,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'button_background_hover_color',
             [
-                'label' => __( 'Background Color', 'xconnect' ),
+                'label' => __( 'Background Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -297,7 +297,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'border_hover_color',
             [
-                'label' => __( 'Border Color', 'xconnect' ),
+                'label' => __( 'Border Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'border-color: {{VALUE}};',
@@ -308,7 +308,7 @@ class xConnect_Button extends Widget_Base {
         $this->add_control(
             'hover_animation',
             [
-                'label' => __( 'Hover Animation', 'xconnect' ),
+                'label' => __( 'Hover Animation', 'skinetic' ),
                 'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -366,4 +366,4 @@ class xConnect_Button extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new xConnect_Button() );
+Plugin::instance()->widgets_manager->register( new Skinetic_Button() );

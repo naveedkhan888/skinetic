@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 get_header();
@@ -21,19 +21,19 @@ get_header();
     endwhile; // End of the loop.
 ?>
 
-<?php if( xconnect_get_option('pf_nav') || xconnect_get_option('pf_related_switch') ) { ?>
+<?php if( skinetic_get_option('pf_nav') || skinetic_get_option('pf_related_switch') ) { ?>
 <div class="container">
     <div class="project-bottom">        
-        <?php if( xconnect_get_option('pf_nav') ) { ?>
+        <?php if( skinetic_get_option('pf_nav') ) { ?>
         <div class="single-portfolio-navigation">
-            <?php xconnect_single_post_nav(); ?>
+            <?php skinetic_single_post_nav(); ?>
         </div>
         <?php } ?>
 
-        <?php if( xconnect_get_option('pf_related_switch') ) { ?>
+        <?php if( skinetic_get_option('pf_related_switch') ) { ?>
         <div class="portfolio-related-posts-wrap">
             <div class="portfolio-related-title-wrap">
-                <h4 class="portfolio-related-title"><?php echo xconnect_get_option('pf_related_text'); ?></h4>
+                <h4 class="portfolio-related-title"><?php echo skinetic_get_option('pf_related_text'); ?></h4>
             </div>
             <div class="portfolio-related-posts projects-grid img-scale">
                 <div class="owl-carousel owl-theme">   

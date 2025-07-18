@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 ?>
@@ -26,7 +26,7 @@
 		</div>
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php if( xconnect_get_option( 'post_entry_meta' ) ) { xconnect_post_meta(); } ?>
+			<?php if( skinetic_get_option( 'post_entry_meta' ) ) { skinetic_post_meta(); } ?>
 	        <a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

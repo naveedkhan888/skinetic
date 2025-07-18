@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( xconnect_get_shop_layout() === 'full-content' ) {
+if ( skinetic_get_shop_layout() === 'full-content' ) {
 	return;
 }
 

@@ -10,7 +10,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'Food Price Menu', 'xconnect' );
+        return __( 'Food Price Menu', 'skinetic' );
     }
 
     public function get_icon() {
@@ -26,7 +26,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'xconnect' ),
+                'label' => __( 'Content', 'skinetic' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -36,9 +36,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title',
             [
-                'label' => __( 'Title', 'xconnect' ),
+                'label' => __( 'Title', 'skinetic' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Menu Item' , 'xconnect' ),
+                'default' => __( 'Menu Item' , 'skinetic' ),
                 'label_block' => true,
             ]
         );
@@ -46,19 +46,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title_tag',
             [
-                'label' => __( 'Title HTML Tag', 'xconnect' ),
+                'label' => __( 'Title HTML Tag', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
-                    'h1' => __( 'H1', 'xconnect' ),
-                    'h2' => __( 'H2', 'xconnect' ),
-                    'h3' => __( 'H3', 'xconnect' ),
-                    'h4' => __( 'H4', 'xconnect' ),
-                    'h5' => __( 'H5', 'xconnect' ),
-                    'h6' => __( 'H6', 'xconnect' ),
-                    'p' => __( 'p', 'xconnect' ),
-                    'span' => __( 'span', 'xconnect' ),
-                    'div' => __( 'div', 'xconnect' ),
+                    'h1' => __( 'H1', 'skinetic' ),
+                    'h2' => __( 'H2', 'skinetic' ),
+                    'h3' => __( 'H3', 'skinetic' ),
+                    'h4' => __( 'H4', 'skinetic' ),
+                    'h5' => __( 'H5', 'skinetic' ),
+                    'h6' => __( 'H6', 'skinetic' ),
+                    'p' => __( 'p', 'skinetic' ),
+                    'span' => __( 'span', 'skinetic' ),
+                    'div' => __( 'div', 'skinetic' ),
                 ],
             ]
         );
@@ -66,9 +66,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description',
             [
-                'label' => __( 'Description', 'xconnect' ),
+                'label' => __( 'Description', 'skinetic' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Menu Item Description' , 'xconnect' ),
+                'default' => __( 'Menu Item Description' , 'skinetic' ),
                 'show_label' => true,
             ]
         );
@@ -76,19 +76,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description_tag',
             [
-                'label' => __( 'Description HTML Tag', 'xconnect' ),
+                'label' => __( 'Description HTML Tag', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'p',
                 'options' => [
-                    'h1' => __( 'H1', 'xconnect' ),
-                    'h2' => __( 'H2', 'xconnect' ),
-                    'h3' => __( 'H3', 'xconnect' ),
-                    'h4' => __( 'H4', 'xconnect' ),
-                    'h5' => __( 'H5', 'xconnect' ),
-                    'h6' => __( 'H6', 'xconnect' ),
-                    'p' => __( 'p', 'xconnect' ),
-                    'span' => __( 'span', 'xconnect' ),
-                    'div' => __( 'div', 'xconnect' ),
+                    'h1' => __( 'H1', 'skinetic' ),
+                    'h2' => __( 'H2', 'skinetic' ),
+                    'h3' => __( 'H3', 'skinetic' ),
+                    'h4' => __( 'H4', 'skinetic' ),
+                    'h5' => __( 'H5', 'skinetic' ),
+                    'h6' => __( 'H6', 'skinetic' ),
+                    'p' => __( 'p', 'skinetic' ),
+                    'span' => __( 'span', 'skinetic' ),
+                    'div' => __( 'div', 'skinetic' ),
                 ],
             ]
         );
@@ -96,9 +96,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'price',
             [
-                'label' => __( 'Price', 'xconnect' ),
+                'label' => __( 'Price', 'skinetic' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( '$10' , 'xconnect' ),
+                'default' => __( '$10' , 'skinetic' ),
                 'label_block' => true,
             ]
         );
@@ -106,9 +106,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'menu_label',
             [
-                'label' => __( 'Menu Label', 'xconnect' ),
+                'label' => __( 'Menu Label', 'skinetic' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Special', 'xconnect' ),
+                'default' => __( 'Special', 'skinetic' ),
                 'label_block' => true,
             ]
         );
@@ -116,7 +116,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'image',
             [
-                'label' => __( 'Image', 'xconnect' ),
+                'label' => __( 'Image', 'skinetic' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -127,9 +127,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'link',
             [
-                'label' => __( 'Link', 'xconnect' ),
+                'label' => __( 'Link', 'skinetic' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'xconnect' ),
+                'placeholder' => __( 'https://your-link.com', 'skinetic' ),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -142,14 +142,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'list',
             [
-                'label' => __( 'List Items', 'xconnect' ),
+                'label' => __( 'List Items', 'skinetic' ),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'title' => __( 'Menu Item #1', 'xconnect' ),
-                        'description' => __( 'Description for menu item #1', 'xconnect' ),
-                        'price' => __( '$10', 'xconnect' ),
+                        'title' => __( 'Menu Item #1', 'skinetic' ),
+                        'description' => __( 'Description for menu item #1', 'skinetic' ),
+                        'price' => __( '$10', 'skinetic' ),
                     ],
                 ],
                 'title_field' => '{{{ title }}}',
@@ -162,7 +162,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'Style', 'xconnect' ),
+                'label' => __( 'Style', 'skinetic' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -171,7 +171,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Title Color', 'xconnect' ),
+                'label' => __( 'Title Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .title' => 'color: {{VALUE}}',
@@ -183,7 +183,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'label' => __( 'Title Typography', 'xconnect' ),
+                'label' => __( 'Title Typography', 'skinetic' ),
                 'selector' => '{{WRAPPER}} .title',
             ]
         );
@@ -192,7 +192,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'description_color',
             [
-                'label' => __( 'Description Color', 'xconnect' ),
+                'label' => __( 'Description Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .description' => 'color: {{VALUE}}',
@@ -204,7 +204,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'description_typography',
-                'label' => __( 'Description Typography', 'xconnect' ),
+                'label' => __( 'Description Typography', 'skinetic' ),
                 'selector' => '{{WRAPPER}} .description',
             ]
         );
@@ -213,7 +213,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'price_color',
             [
-                'label' => __( 'Price Color', 'xconnect' ),
+                'label' => __( 'Price Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .price' => 'color: {{VALUE}}',
@@ -225,7 +225,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'menu_label_bg_color',
             [
-                'label' => __( 'Menu Label Background Color', 'xconnect' ),
+                'label' => __( 'Menu Label Background Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'price_typography',
-                'label' => __( 'Price Typography', 'xconnect' ),
+                'label' => __( 'Price Typography', 'skinetic' ),
                 'selector' => '{{WRAPPER}} .price',
             ]
         );
@@ -246,14 +246,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_style',
             [
-                'label' => __( 'Separator Style', 'xconnect' ),
+                'label' => __( 'Separator Style', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'xconnect' ),
-                    'dotted' => __( 'Dotted', 'xconnect' ),
-                    'dashed' => __( 'Dashed', 'xconnect' ),
-                    'double' => __( 'Double', 'xconnect' ),
-                    'none' => __( 'None', 'xconnect' ),
+                    'solid' => __( 'Solid', 'skinetic' ),
+                    'dotted' => __( 'Dotted', 'skinetic' ),
+                    'dashed' => __( 'Dashed', 'skinetic' ),
+                    'double' => __( 'Double', 'skinetic' ),
+                    'none' => __( 'None', 'skinetic' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -265,7 +265,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_weight',
             [
-                'label' => __( 'Separator Weight', 'xconnect' ),
+                'label' => __( 'Separator Weight', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -282,7 +282,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_color',
             [
-                'label' => __( 'Separator Color', 'xconnect' ),
+                'label' => __( 'Separator Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .separator' => 'border-bottom-color: {{VALUE}}',
@@ -294,14 +294,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_style',
             [
-                'label' => __( 'Item Separator Style', 'xconnect' ),
+                'label' => __( 'Item Separator Style', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'xconnect' ),
-                    'dotted' => __( 'Dotted', 'xconnect' ),
-                    'dashed' => __( 'Dashed', 'xconnect' ),
-                    'double' => __( 'Double', 'xconnect' ),
-                    'none' => __( 'None', 'xconnect' ),
+                    'solid' => __( 'Solid', 'skinetic' ),
+                    'dotted' => __( 'Dotted', 'skinetic' ),
+                    'dashed' => __( 'Dashed', 'skinetic' ),
+                    'double' => __( 'Double', 'skinetic' ),
+                    'none' => __( 'None', 'skinetic' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -313,7 +313,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_weight',
             [
-                'label' => __( 'Item Separator Weight', 'xconnect' ),
+                'label' => __( 'Item Separator Weight', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -330,7 +330,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_color',
             [
-                'label' => __( 'Item Separator Color', 'xconnect' ),
+                'label' => __( 'Item Separator Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .item-separator' => 'border-top-color: {{VALUE}}',
@@ -342,7 +342,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_responsive_control(
             'item_spacing',
             [
-                'label' => __( 'Item Spacing', 'xconnect' ),
+                'label' => __( 'Item Spacing', 'skinetic' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [

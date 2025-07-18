@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function xconnect_importer() {
+function skinetic_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo (all layout)',
@@ -169,4 +169,4 @@ function xconnect_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'xconnect_importer', 30 );
+add_filter( 'soo_demo_packages', 'skinetic_importer', 30 );

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 
  */
 
-class xConnect_Vertical_Menu extends Widget_Base{
+class Skinetic_Vertical_Menu extends Widget_Base{
 
 
 
@@ -26,7 +26,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 	public function get_title() {
 
-		return __( 'XP Vertical Services Menu', 'xconnect' );
+		return __( 'XP Vertical Services Menu', 'skinetic' );
 
 	}
 
@@ -42,7 +42,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 	public function get_categories() {
 
-		return [ 'category_xconnect_sidebar' ];
+		return [ 'category_skinetic_sidebar' ];
 
 	}
 
@@ -58,7 +58,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Menu', 'xconnect' ),
+				'label' => __( 'Menu', 'skinetic' ),
 
 			]
 
@@ -74,7 +74,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => esc_html__( 'Select Services Menu', 'xconnect' ),
+				'label' => esc_html__( 'Select Services Menu', 'skinetic' ),
 
 				'type' => Controls_Manager::SELECT,
 
@@ -104,7 +104,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Vertical Menu Style', 'xconnect' ),
+				'label' => __( 'Vertical Menu Style', 'skinetic' ),
 
 				'tab'   => Controls_Manager::TAB_STYLE,
 
@@ -122,7 +122,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Color', 'xconnect' ),
+				'label' => __( 'Background Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -144,7 +144,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Hover Color', 'xconnect' ),
+				'label' => __( 'Background Hover Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -166,7 +166,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Flash Color', 'xconnect' ),
+				'label' => __( 'Background Flash Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -190,7 +190,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Text Color', 'xconnect' ),
+				'label' => __( 'Text Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -214,7 +214,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Hover Text Color', 'xconnect' ),
+				'label' => __( 'Hover Text Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -238,7 +238,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Active Menu Item Color', 'xconnect' ),
+				'label' => __( 'Active Menu Item Color', 'skinetic' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -280,7 +280,7 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Item Padding', 'xconnect' ),
+				'label' => __( 'Item Padding', 'skinetic' ),
 
 				'type' => Controls_Manager::DIMENSIONS,
 
@@ -366,4 +366,4 @@ class xConnect_Vertical_Menu extends Widget_Base{
 
 // Register the new vertical menu widget with Elementor
 
-Plugin::instance()->widgets_manager->register( new xConnect_Vertical_Menu() );
+Plugin::instance()->widgets_manager->register( new Skinetic_Vertical_Menu() );

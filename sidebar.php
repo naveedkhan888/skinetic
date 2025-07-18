@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package xConnect
+ * @package Skinetic
  */
 
-if ( xconnect_get_layout() === 'full-content' ) {
+if ( skinetic_get_layout() === 'full-content' ) {
 	return;
 }
 

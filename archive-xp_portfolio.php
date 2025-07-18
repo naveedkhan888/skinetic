@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package xConnect
+ * @package Skinetic
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				<main id="main" class="site-main">	
 					<div class="project-filter-wrapper">				
 						<ul class="project_filters">
-							<li><a href="#" data-filter="*" class="selected"><?php esc_html_e('All', 'xconnect'); ?><span class="filter-count"></span></a></li>
+							<li><a href="#" data-filter="*" class="selected"><?php esc_html_e('All', 'skinetic'); ?><span class="filter-count"></span></a></li>
 							<?php 
 								$terms = get_terms("portfolio_cat"); // get all categories, but you can use any taxonomy
 								$count = count($terms); //How many are they?
@@ -30,7 +30,7 @@ get_header(); ?>
 						</ul>	
 
 						<?php $p_count = wp_count_posts('xp_portfolio'); $c = $p_count->publish; if ( have_posts() ) : ?>
-							<div id="projects-grid" class="projects-grid img-scale <?php xconnect_portfolio_option_class(); ?>" data-load="3" data-count="<?php echo esc_attr($c); ?>">
+							<div id="projects-grid" class="projects-grid img-scale <?php skinetic_portfolio_option_class(); ?>" data-load="3" data-count="<?php echo esc_attr($c); ?>">
 								<div class="grid-sizer"></div>
 								<?php
 									/* Start the Loop */
@@ -46,8 +46,8 @@ get_header(); ?>
 									endwhile; 
 								?>
 							</div>
-							<?php if( $c >= xconnect_get_option('portfolio_posts_per_page') ) { ?>
-								<div class="btn-block"><span id="btn-loadmore" class="btn-loadmore xptf-btn" data-loaded="<?php esc_attr_e('Load More', 'xconnect'); ?>" data-loading="<?php esc_attr_e('Loading', 'xconnect'); ?>"> <?php esc_html_e('Load More', 'xconnect'); ?></span></div>							
+							<?php if( $c >= skinetic_get_option('portfolio_posts_per_page') ) { ?>
+								<div class="btn-block"><span id="btn-loadmore" class="btn-loadmore xptf-btn" data-loaded="<?php esc_attr_e('Load More', 'skinetic'); ?>" data-loading="<?php esc_attr_e('Loading', 'skinetic'); ?>"> <?php esc_html_e('Load More', 'skinetic'); ?></span></div>							
 							<?php } ?>
 						<?php 	
 						else :

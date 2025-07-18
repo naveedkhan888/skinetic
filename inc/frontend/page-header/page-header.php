@@ -1,6 +1,6 @@
 <?php
-if ( ! function_exists( 'xconnect_page_header' ) ) {
-    function xconnect_page_header (){
+if ( ! function_exists( 'skinetic_page_header' ) ) {
+    function skinetic_page_header (){
         $pheader = '';
         if ( function_exists('rwmb_meta') ) {
             $pheader = rwmb_meta('pheader_switch');
@@ -16,7 +16,7 @@ if ( ! function_exists( 'xconnect_page_header' ) ) {
                 return;
             }
         }
-        if( !xconnect_get_option('pheader_switch') && !$pheader ) {
+        if( !skinetic_get_option('pheader_switch') && !$pheader ) {
             return;
         }else{
             $bg     = '';
@@ -26,17 +26,17 @@ if ( ! function_exists( 'xconnect_page_header' ) ) {
             if ( is_home() ) {
                 $title = get_the_title(get_option('page_for_posts'));
             } elseif ( is_search() ) {
-                $title = esc_html__('Search Results for: ', 'xconnect') . get_search_query();
+                $title = esc_html__('Search Results for: ', 'skinetic') . get_search_query();
             } elseif ( is_archive() ) {
                 $title = get_the_archive_title();
             } elseif ( is_singular('post') ) {
-                $title = xconnect_get_option( 'ptitle_post' ) ? xconnect_get_option( 'ptitle_post' ) : get_the_title();
+                $title = skinetic_get_option( 'ptitle_post' ) ? skinetic_get_option( 'ptitle_post' ) : get_the_title();
             }else {
                 $title = get_the_title();
             }
             
             if (!function_exists('rwmb_meta')) {
-                $bg = xconnect_get_option( 'pheader_img' );
+                $bg = skinetic_get_option( 'pheader_img' );
             } else {
                 if( is_home() ) {
                     $images = rwmb_meta('pheader_bg_image', "type=image", get_option( 'page_for_posts' ));
@@ -50,7 +50,7 @@ if ( ! function_exists( 'xconnect_page_header' ) ) {
                     $images = rwmb_meta('pheader_bg_image', "type=image");
                 }
                 if (!$images) {
-                    $bg = xconnect_get_option( 'pheader_img' );
+                    $bg = skinetic_get_option( 'pheader_img' );
                 } else {
                     foreach ($images as $image) {
                         $bg = $image['full_url'];
@@ -65,21 +65,21 @@ if ( ! function_exists( 'xconnect_page_header' ) ) {
         ?>        
             <div class="page-header flex-middle" <?php if ($bg) { ?> style="background-image: url(<?php echo esc_url($bg); ?>);" <?php } ?>>
                 <div class="container">
-                    <div class="inner <?php if( !xconnect_get_option( 'left_bread' ) ) echo 'flex-middle'; ?>">
+                    <div class="inner <?php if( !skinetic_get_option( 'left_bread' ) ) echo 'flex-middle'; ?>">
                         <?php if( class_exists( 'woocommerce' ) && is_woocommerce() ) { ?>
                             <?php if( !is_product() ){ ?>
                                 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
                                     <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
                                 <?php endif; ?>                            
                             <?php }else{ ?>
-                                <h2 class="page-title"><?php echo esc_html( xconnect_get_option( 'page_title_product' ) ); ?></h2>
+                                <h2 class="page-title"><?php echo esc_html( skinetic_get_option( 'page_title_product' ) ); ?></h2>
                             <?php } ?>    
-                            <?php do_action( 'xconnect_woocommerce_breadcrumb' ); ?>
+                            <?php do_action( 'skinetic_woocommerce_breadcrumb' ); ?>
                         <?php }else{ ?>
                             <h1 class="page-title"><?php echo implode('', $output); ?></h1>
                         <?php 
-                            if (function_exists('xconnect_breadcrumbs') && xconnect_get_option('breadcrumbs')):
-                                echo xconnect_breadcrumbs();
+                            if (function_exists('skinetic_breadcrumbs') && skinetic_get_option('breadcrumbs')):
+                                echo skinetic_breadcrumbs();
                             endif;
                         } ?>
                     </div>

@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class xConnect_Dynamic_Title extends Widget_Base {
+class Skinetic_Dynamic_Title extends Widget_Base {
 
     public function get_name() {
-        return 'xconnect_dynamic_title';
+        return 'skinetic_dynamic_title';
     }
 
     public function get_title() {
-        return __( 'Dynamic Title', 'xconnect' );
+        return __( 'Dynamic Title', 'skinetic' );
     }
 
     public function get_icon() {
@@ -18,21 +18,21 @@ class xConnect_Dynamic_Title extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_xconnect' ];
+        return [ 'category_skinetic' ];
     }
 
     protected function _register_controls() {
         $this->start_controls_section(
             'section_title',
             [
-                'label' => __( 'Title', 'xconnect' ),
+                'label' => __( 'Title', 'skinetic' ),
             ]
         );
 
         $this->add_control(
             'html_tag',
             [
-                'label' => __( 'HTML Tag', 'xconnect' ),
+                'label' => __( 'HTML Tag', 'skinetic' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -51,25 +51,25 @@ class xConnect_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'alignment',
             [
-                'label' => __( 'Alignment', 'xconnect' ),
+                'label' => __( 'Alignment', 'skinetic' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'xconnect' ),
+                        'title' => __( 'Left', 'skinetic' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'xconnect' ),
+                        'title' => __( 'Center', 'skinetic' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'xconnect' ),
+                        'title' => __( 'Right', 'skinetic' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'center',
                 'selectors' => [
-                    '{{WRAPPER}} .xconnect-dynamic-title' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .skinetic-dynamic-title' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -77,10 +77,10 @@ class xConnect_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'color',
             [
-                'label' => __( 'Text Color', 'xconnect' ),
+                'label' => __( 'Text Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .xconnect-dynamic-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .skinetic-dynamic-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -89,8 +89,8 @@ class xConnect_Dynamic_Title extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'label' => __( 'Typography', 'xconnect' ),
-                'selector' => '{{WRAPPER}} .xconnect-dynamic-title',
+                'label' => __( 'Typography', 'skinetic' ),
+                'selector' => '{{WRAPPER}} .skinetic-dynamic-title',
             ]
         );
 
@@ -102,8 +102,8 @@ class xConnect_Dynamic_Title extends Widget_Base {
         $tag = $settings['html_tag'];
         $title = get_the_title();
         
-        echo "<{$tag} class='xconnect-dynamic-title'>{$title}</{$tag}>";
+        echo "<{$tag} class='skinetic-dynamic-title'>{$title}</{$tag}>";
     }
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new xConnect_Dynamic_Title() );
+Plugin::instance()->widgets_manager->register_widget_type( new Skinetic_Dynamic_Title() );

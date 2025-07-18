@@ -13,7 +13,7 @@
 <?php
 
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
-	xconnect_404_builder();
+	skinetic_404_builder();
 } 
 
 ?>

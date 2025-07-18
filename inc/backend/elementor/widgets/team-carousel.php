@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team Carousel
  */
-class xConnect_Team_Carousel extends Widget_Base{
+class Skinetic_Team_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Team Carousel', 'xconnect' );
+		return __( 'XP Team Carousel', 'skinetic' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xconnect' ];
+		return [ 'category_skinetic' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Team', 'xconnect' ),
+				'label' => esc_html__( 'Team', 'skinetic' ),
 			]
 		);
 
@@ -42,7 +42,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'xconnect' ),
+	            'label' => esc_html__( 'Photo', 'skinetic' ),
 	            'type'  => Controls_Manager::MEDIA,
 		    ]
 		);
@@ -50,9 +50,9 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'xconnect' ),
+	          	'label' => esc_html__( 'Name', 'skinetic' ),
 	          	'type'  => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Peter Perish', 'xconnect' ),
+				'default' => esc_html__( 'Peter Perish', 'skinetic' ),
 				'label_block' => true
 	    	]
 	    );
@@ -60,28 +60,28 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'xconnect' ),
+	          	'label' => esc_html__( 'Extra/Job', 'skinetic' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'co-founder of company', 'xconnect' ),
+	          	'default' => esc_html__( 'co-founder of company', 'skinetic' ),
 	    	]
 	    );
 
 	    $repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'xconnect' ),
+				'label' => __( 'Link To Details', 'skinetic' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'xconnect' ),
+				'placeholder' => __( 'https://', 'skinetic' ),
 			]
 		);
 
 		$repeater->add_control(
 			'socials',
 			[
-				'label' => __( 'Socials', 'xconnect' ),
+				'label' => __( 'Socials', 'skinetic' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'xconnect' ),
-				'label_off' => __( 'Hide', 'xconnect' ),
+				'label_on' => __( 'Show', 'skinetic' ),
+				'label_off' => __( 'Hide', 'skinetic' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -91,7 +91,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'social1',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 1', 'xconnect' ),
+	          	'label' => esc_html__( 'Icon Social 1', 'skinetic' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -106,9 +106,9 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social1_link',
 			[
-				'label' => __( 'Link Social 1', 'xconnect' ),
+				'label' => __( 'Link Social 1', 'skinetic' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://twitter.com/', 'xconnect' ),
+				'placeholder' => __( 'https://twitter.com/', 'skinetic' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -118,7 +118,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social2',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 2', 'xconnect' ),
+	          	'label' => esc_html__( 'Icon Social 2', 'skinetic' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -134,9 +134,9 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social2_link',
 			[
-				'label' => __( 'Link Social 2', 'xconnect' ),
+				'label' => __( 'Link Social 2', 'skinetic' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://facebook.com/', 'xconnect' ),
+				'placeholder' => __( 'https://facebook.com/', 'skinetic' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -146,7 +146,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social3',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 3', 'xconnect' ),
+	          	'label' => esc_html__( 'Icon Social 3', 'skinetic' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -162,9 +162,9 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social3_link',
 			[
-				'label' => __( 'Link Social 3', 'xconnect' ),
+				'label' => __( 'Link Social 3', 'skinetic' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://pinterest.com/', 'xconnect' ),
+				'placeholder' => __( 'https://pinterest.com/', 'skinetic' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -174,7 +174,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 		    'members',
 		    [
-		        'label'       => esc_html__( 'Team', 'xconnect' ),
+		        'label'       => esc_html__( 'Team', 'skinetic' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => false,
 		        'default'     => [],
@@ -198,10 +198,10 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'xconnect' ),
+				'label' => __( 'Slides To Show', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'xconnect' ),
+					'' => __( 'Default', 'skinetic' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -209,31 +209,31 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'xconnect' ),
+				'label' => __( 'Loop', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'xconnect' ),
-					'false' => __( 'No', 'xconnect' ),
+					'true' => __( 'Yes', 'skinetic' ),
+					'false' => __( 'No', 'skinetic' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'xconnect' ),
+				'label' => __( 'Autoplay', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'xconnect' ),
-					'false' => __( 'No', 'xconnect' ),
+					'true' => __( 'Yes', 'skinetic' ),
+					'false' => __( 'No', 'skinetic' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'xconnect' ),
+				'label' => __( 'Autoplay Timeout', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -253,31 +253,31 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'xconnect' ),
+				'label' => __( 'Arrows', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'xconnect' ),
-					'false'  => __( 'No', 'xconnect' ),
+					'true'   => __( 'Yes', 'skinetic' ),
+					'false'  => __( 'No', 'skinetic' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'xconnect' ),
+				'label' => __( 'Dots', 'skinetic' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'xconnect' ),
-					'false'  => __( 'No', 'xconnect' ),
+					'true'   => __( 'Yes', 'skinetic' ),
+					'false'  => __( 'No', 'skinetic' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'xconnect' ),
+				'label' => __( 'Gap Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -294,7 +294,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'General', 'xconnect' ),
+				'label' => esc_html__( 'General', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -302,7 +302,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -324,14 +324,14 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'xconnect' ),
+				'label' => esc_html__( 'Info Box', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_info_box',
 			[
-				'label' => __( 'General', 'xconnect' ),
+				'label' => __( 'General', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -339,19 +339,19 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xconnect' ),
+				'label' => __( 'Alignment', 'skinetic' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xconnect' ),
+						'title' => __( 'Left', 'skinetic' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xconnect' ),
+						'title' => __( 'Center', 'skinetic' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xconnect' ),
+						'title' => __( 'Right', 'skinetic' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -363,7 +363,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'padding_box',
 			[
-				'label' => __( 'Padding Box', 'xconnect' ),
+				'label' => __( 'Padding Box', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -374,7 +374,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -393,7 +393,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'xconnect' ),
+				'label' => __( 'Title', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -402,7 +402,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xconnect' ),
+				'label' => esc_html__( 'Spacing', 'skinetic' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -419,7 +419,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'xconnect' ),
+				'label'     => esc_html__( 'Color', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -430,7 +430,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'xconnect' ),
+				'label'     => esc_html__( 'Color Hover', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -445,7 +445,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'xconnect' ),
+				'label'    => esc_html__( 'Typography', 'skinetic' ),
 				'selector' => '{{WRAPPER}} .xp-team h6',
 			]
 		);
@@ -454,7 +454,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'xconnect' ),
+				'label' => __( 'Extra/Job', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -463,7 +463,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xconnect' ),
+				'label' => esc_html__( 'Spacing', 'skinetic' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -479,7 +479,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'xconnect' ),
+				'label'     => esc_html__( 'Color', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -491,7 +491,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'xconnect' ),
+					'label'    => esc_html__( 'Typography', 'skinetic' ),
 					'selector' => '{{WRAPPER}} .team-info span',
 				]
 		);
@@ -502,7 +502,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'xconnect' ),
+				'label' => esc_html__( 'Socials', 'skinetic' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -510,7 +510,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'xconnect' ),
+				'label' => esc_html__( 'Spacing', 'skinetic' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -526,7 +526,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_socials',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -538,7 +538,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'xconnect' ),
+				'label'     => esc_html__( 'Color', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -550,7 +550,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'xconnect' ),
+				'label'     => esc_html__( 'Background', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -561,7 +561,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'xconnect' ),
+				'label'     => esc_html__( 'Color Hover', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -573,7 +573,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'social_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'xconnect' ),
+				'label'     => esc_html__( 'Background Hover', 'skinetic' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -588,7 +588,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'xconnect' ),
+				'label' => __( 'Dots', 'skinetic' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -599,7 +599,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -616,7 +616,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'xconnect' ),
+                'label' => __( 'Color', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -627,7 +627,7 @@ class xConnect_Team_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'xconnect' ),
+                'label' => __( 'Color Active', 'skinetic' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -641,7 +641,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'xconnect' ),
+				'label' => __( 'Arrows', 'skinetic' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -651,7 +651,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'xconnect' ),
+				'label' => __( 'Spacing', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -668,7 +668,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'xconnect' ),
+				'label' => __( 'Width', 'skinetic' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -684,7 +684,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'xconnect' ),
+				'label' => __( 'Color', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -696,7 +696,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'xconnect' ),
+				'label' => __( 'Background', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -707,7 +707,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'xconnect' ),
+				'label' => __( 'Color Hover', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -718,7 +718,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'xconnect' ),
+				'label' => __( 'Background Hover', 'skinetic' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -729,7 +729,7 @@ class xConnect_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'xconnect' ),
+				'label' => __( 'Border Radius', 'skinetic' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -820,5 +820,5 @@ class xConnect_Team_Carousel extends Widget_Base{
 	    <?php
 	}
 }
-// After the xConnect_Team_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new xConnect_Team_Carousel() );
+// After the Skinetic_Team_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Skinetic_Team_Carousel() );

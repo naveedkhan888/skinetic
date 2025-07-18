@@ -11,7 +11,7 @@ function my_theme_post_import_setup() {
     // Check if Elementor is loaded
     if ( did_action('elementor/loaded') ) {
         // ✅ Enable Font Awesome icons in Elementor settings
-        update_option('elementor_fontawesome_enable', 'yes');
+        update_option('elementor_enable_fa4_support', 'yes');
 
         // ✅ Regenerate Elementor CSS files
         \Elementor\Plugin::instance()->files_manager->clear_cache();

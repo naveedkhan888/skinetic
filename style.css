@@ -1577,13 +1577,13 @@ a:hover, a:active {
   opacity: 1;
   margin-right: 6px;
   transform: scale(1);
-  font-size: 5px;
+  font-size: 12px;
 }
 .main-navigation ul li li a::before {
   content: "●";
   display: inline-block;
   vertical-align: middle;
-  margin: -4px 0 0 0;
+  margin: -5px 0 0 0;
     margin-right: 0px;
   transition: all 0.2s ease-in-out;
   opacity: 0;

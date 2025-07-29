@@ -7921,6 +7921,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   visibility: visible;
   opacity: 1;
   z-index: 9998;
+  backdrop-filter: blur(5px);
 }
 
 @media only screen and (max-width: 782px) {

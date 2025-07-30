@@ -135,7 +135,7 @@ class Skinetic_Sidepanel extends Widget_Base{
 	    	<div class="xptf-sidepanel xptf-cta-header">
 				<div class="site-overlay panel-overlay"></div>
 				<div id="panel-btn" class="panel-btn xptf-cta-icons">
-					<i class="xp-webicon-menu"></i>
+					<i class="xpicon xpicon-menu-3"></i>
 				</div>
 			</div>
 		    

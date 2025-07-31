@@ -596,7 +596,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
      data-dots="<?php echo esc_attr($settings['dots']); ?>">
 			<div class="owl-carousel owl-theme">
 				<?php if ( ! empty( $settings['testi_slider'] ) ) : foreach ( $settings['testi_slider'] as $testi ) : ?>
-				<div class="testi-item row">
+				<div class="testi-item row flex-middle">
 					<div class="col-md-4">
 						<?php if($testi['timage']['url']) { ?>
 							<div class="tphoto"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>

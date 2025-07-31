@@ -609,7 +609,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 					</div>
 					<div class="col-md-4">
 						<?php if($testi['timage']['url']) { ?>
-							<div class="tphoto"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
+							<div class="tphoto without_icon"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
 						<?php } ?>
 					</div>
 				</div>

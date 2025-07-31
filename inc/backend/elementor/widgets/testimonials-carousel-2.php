@@ -596,15 +596,19 @@ class Skinetic_Testimonials2 extends Widget_Base{
      data-dots="<?php echo esc_attr($settings['dots']); ?>">
 			<div class="owl-carousel owl-theme">
 				<?php if ( ! empty( $settings['testi_slider'] ) ) : foreach ( $settings['testi_slider'] as $testi ) : ?>
-				<div class="testi-item">
-					<?php if($testi['timage']['url']) { ?>
-						<div class="tphoto"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
-					<?php } ?>
-					<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>			
-					<div class="t-head">
-						<div class="tinfo">
-							<?php if($testi['tname']) { echo '<h6>' .$testi['tname']. '</h6>'; } ?>
-							<?php if($testi['tjob']) { echo '<span>' .$testi['tjob']. '</span>'; } ?>
+				<div class="testi-item row">
+					<div class="col-md-4">
+						<?php if($testi['timage']['url']) { ?>
+							<div class="tphoto"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
+						<?php } ?>
+					</div>
+					<div class="col-md-8">
+						<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
+						<div class="t-head">
+							<div class="tinfo">
+								<?php if($testi['tname']) { echo '<h6>' .$testi['tname']. '</h6>'; } ?>
+								<?php if($testi['tjob']) { echo '<span>' .$testi['tjob']. '</span>'; } ?>
+							</div>
 						</div>
 					</div>
 				</div>

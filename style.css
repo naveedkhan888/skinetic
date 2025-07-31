@@ -767,6 +767,7 @@ mark, ins {
 
 .for_top_buttons .owl-carousel .owl-nav button.owl-next {
   right: 0;
+  margin-left: 10px;
 }
 .for_top_buttons .owl-carousel .owl-nav button.owl-prev {
   left: 0;

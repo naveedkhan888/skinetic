@@ -81,6 +81,15 @@ class Skinetic_Testimonials2 extends Widget_Base{
 		);
 
 		$repeater->add_control(
+			'ttitlenew',
+			[
+				'label' => __( 'Big Title:', 'skinetic' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => 'Emilia Clarke',
+			]
+		);
+
+		$repeater->add_control(
 			'tjob',
 			[
 				'label' => __( 'Job:', 'skinetic' ),
@@ -399,6 +408,52 @@ class Skinetic_Testimonials2 extends Widget_Base{
 			]
 		);
 
+		/* Big Title */
+		$this->add_control(
+			'style_ttitlenew',
+			[
+				'label' => __( 'Big Title', 'skinetic' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		$this->add_responsive_control(
+			'spacing_ttitlenew',
+			[
+				'label' => __( 'Spacing', 'skinetic' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials h4' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_control(
+			'ttitlenew_color',
+			[
+				'label' => __( 'Text Color', 'skinetic' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials h4' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'ttitlenew_typography',
+				'selector' => '{{WRAPPER}} .xp-testimonials h4',
+			]
+		);
+
 		/* name */
 		$this->add_control(
 			'style_tname',
@@ -651,6 +706,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 					<div class="col-md-8 p-0">
 						<div class="boxx_inner">
 							<div class="tphoto"></div>
+								<?php if($testi['ttitlenew']) { echo '<h6>' .$testi['ttitlenew']. '</h6>'; } ?>
 								<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
 								<div class="t-head">
 									<div class="tinfo">

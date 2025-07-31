@@ -269,6 +269,25 @@ class Skinetic_Testimonials2 extends Widget_Base{
 		);
 
 		$this->add_responsive_control(
+			'boxx_inner_border_radius',
+			[
+				'label' => __( 'Box Border Radius', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'default' => [
+					'top' => '',
+					'right' => '',
+					'bottom' => '',
+					'left' => '',
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .testi-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
 			'boxx_inner',
 			[
 				'label' => __( 'Box Padding', 'skinetic' ),

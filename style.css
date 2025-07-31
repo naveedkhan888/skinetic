@@ -6432,6 +6432,9 @@ object {
 .p-0 {
   padding: 0;
 }
+.testi-item.flex-middle {
+  overflow: hidden;
+}
 .xp-testimonials-carousel-2 .t-head {
   padding: 0;
   margin-top: 32px;

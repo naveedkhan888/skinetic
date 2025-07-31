@@ -6408,6 +6408,9 @@ object {
 .tphoto.without_icon:after {
   display: none !important;
 }
+.tphoto.without_icon {
+  margin: 0 !important;
+}
 .xp-testimonials-carousel-2 .tphoto::after {
   position: relative;
   top: inherit;
@@ -6419,8 +6422,8 @@ object {
   border-radius: 0;
 }
 .xp-testimonials-carousel-2 .tphoto {
-  margin-top: 15px;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
   display: inline-block;
   width: 100%;
 }

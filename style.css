@@ -6421,6 +6421,7 @@ object {
 .xp-testimonials-carousel-2 .tphoto img {
   border-radius: 0;
   object-fit: cover;
+  display: inline-block;
 }
 .xp-testimonials-carousel-2 .tphoto {
   margin-top: 0;

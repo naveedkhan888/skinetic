@@ -6438,7 +6438,6 @@ object {
 }
 .xp-testimonials-carousel-2 .ttext {
   font-size: 22px;
-  font-weight: 300;
 }
 .xp-testimonials-carousel-2 .owl-nav button.owl-prev,
 .xp-testimonials-carousel-2 .owl-nav button.owl-next {
@@ -7420,6 +7419,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 @media (max-width: 767px) {
+  .testi-item.flex-middle { display: inline-block; }
   .page-template-template-homepage .elementor-top-section:not(.elementor-section-full_width) > .elementor-container,
 .page-template-template-full-width .elementor-top-section:not(.elementor-section-full_width) > .elementor-container,
 .page-template-template-home-full-width .elementor-top-section:not(.elementor-section-full_width) > .elementor-container {

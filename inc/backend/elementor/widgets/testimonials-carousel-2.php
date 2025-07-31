@@ -706,7 +706,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 					<div class="col-md-8 p-0">
 						<div class="boxx_inner">
 							<div class="tphoto"></div>
-								<?php if($testi['ttitlenew']) { echo '<h6>' .$testi['ttitlenew']. '</h6>'; } ?>
+								<?php if($testi['ttitlenew']) { echo '<h4>' .$testi['ttitlenew']. '</h4>'; } ?>
 								<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
 								<div class="t-head">
 									<div class="tinfo">

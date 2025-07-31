@@ -268,6 +268,37 @@ class Skinetic_Testimonials2 extends Widget_Base{
 			]
 		);
 
+		$this->add_control(
+			'boxx_inner',
+			[
+				'label' => __( 'Box Padding', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'default' => [
+					'top' => '',
+					'right' => '',
+					'bottom' => '',
+					'left' => '',
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'boxx_inner_bg_color',
+			[
+				'label' => __( 'Box Background Color', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -598,13 +629,15 @@ class Skinetic_Testimonials2 extends Widget_Base{
 				<?php if ( ! empty( $settings['testi_slider'] ) ) : foreach ( $settings['testi_slider'] as $testi ) : ?>
 				<div class="testi-item row flex-middle">
 					<div class="col-md-8">
-						<div class="tphoto"></div>
-						<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
-						<div class="t-head">
-							<div class="tinfo">
-								<?php if($testi['tname']) { echo '<h6>' .$testi['tname']. '</h6>'; } ?>
-								<?php if($testi['tjob']) { echo '<span>' .$testi['tjob']. '</span>'; } ?>
-							</div>
+						<div class="boxx_inner">
+							<div class="tphoto"></div>
+								<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
+								<div class="t-head">
+									<div class="tinfo">
+										<?php if($testi['tname']) { echo '<h6>' .$testi['tname']. '</h6>'; } ?>
+										<?php if($testi['tjob']) { echo '<span>' .$testi['tjob']. '</span>'; } ?>
+									</div>
+								</div>
 						</div>
 					</div>
 					<div class="col-md-4">

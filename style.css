@@ -891,7 +891,38 @@ td {
   padding: 0.4375em;
 }
 
-
+.gradient_left_right:before {
+  content: '';
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 10%;
+  width: 700px;
+  height: 700px;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  background: radial-gradient(circle at 50% 50%, #8f4d5d, #444bf700);
+  opacity: 0.3;
+}
+.gradient_left_right:after {
+  content: '';
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 10%;
+  right: 10%;
+  width: 700px;
+  height: 700px;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  background: radial-gradient(circle at 50% 50%, #8f4d5d, #444bf700);
+  opacity: 0.3;
+}
 
 .border_clr.elementor-widget-divider.elementor-view-framed .elementor-icon, 
 .border_clr.elementor-widget-divider.elementor-view-default .elementor-icon svg {

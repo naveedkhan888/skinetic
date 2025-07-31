@@ -765,6 +765,24 @@ mark, ins {
   right: 30px;
 }
 
+.for_top_buttons .owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+.for_top_buttons .owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+.for_top_buttons .owl-carousel .owl-nav {
+  width: auto;
+  right: 0;
+  left: inherit;
+  top: -130px;
+  margin: 0;
+}
+
+.for_top_buttons .owl-carousel .owl-nav button.owl-prev, .for_top_buttons .owl-carousel .owl-nav button.owl-next {
+  position: relative;
+}
+
 .section-baner.elementor-widget-text-editor h3 {
   margin-bottom: 2px;
   color: #fff;

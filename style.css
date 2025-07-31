@@ -6427,6 +6427,9 @@ object {
   display: inline-block;
   width: 100%;
 }
+.pl-0 {
+  padding-left: 0;
+}
 .xp-testimonials-carousel-2 .t-head {
   padding: 0;
   margin-top: 32px;

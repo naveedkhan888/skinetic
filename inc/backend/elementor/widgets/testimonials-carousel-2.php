@@ -268,7 +268,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'boxx_inner',
 			[
 				'label' => __( 'Box Padding', 'skinetic' ),
@@ -295,6 +295,37 @@ class Skinetic_Testimonials2 extends Widget_Base{
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'custom_box_height',
+			[
+				'label' => __( 'Box/image Height', 'skinetic' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'vh' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+					'vh' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'default' => [
+					'size' => '',
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'min-height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .xp-testimonials .tphoto.without_icon img' => 'min-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -640,7 +671,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 								</div>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 pl-0">
 						<?php if($testi['timage']['url']) { ?>
 							<div class="tphoto without_icon"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
 						<?php } ?>

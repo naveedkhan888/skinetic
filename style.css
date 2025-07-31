@@ -6428,8 +6428,8 @@ object {
   display: inline-block;
   width: 100%;
 }
-.pl-0 {
-  padding-left: 0;
+.p-0 {
+  padding: 0;
 }
 .xp-testimonials-carousel-2 .t-head {
   padding: 0;

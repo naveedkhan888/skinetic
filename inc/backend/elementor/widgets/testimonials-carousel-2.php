@@ -294,41 +294,11 @@ class Skinetic_Testimonials2 extends Widget_Base{
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .xp-testimonials .testi-item' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
 
-		$this->add_responsive_control(
-			'custom_box_height',
-			[
-				'label' => __( 'Box/image Height', 'skinetic' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'vh' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 1000,
-					],
-					'%' => [
-						'min' => 0,
-						'max' => 100,
-					],
-					'vh' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'default' => [
-					'size' => '',
-					'unit' => 'px',
-				],
-				'selectors' => [
-					'{{WRAPPER}} .xp-testimonials .boxx_inner' => 'min-height: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .xp-testimonials .tphoto.without_icon img' => 'min-height: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -352,7 +322,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_timage',
 			[
-				'label' => __( 'Photo', 'skinetic' ),
+				'label' => __( 'Quote icon', 'skinetic' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -658,8 +628,8 @@ class Skinetic_Testimonials2 extends Widget_Base{
      data-dots="<?php echo esc_attr($settings['dots']); ?>">
 			<div class="owl-carousel owl-theme">
 				<?php if ( ! empty( $settings['testi_slider'] ) ) : foreach ( $settings['testi_slider'] as $testi ) : ?>
-				<div class="testi-item row flex-middle">
-					<div class="col-md-8">
+				<div class="testi-item flex-middle">
+					<div class="col-md-8 p-0">
 						<div class="boxx_inner">
 							<div class="tphoto"></div>
 								<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
@@ -671,7 +641,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 								</div>
 						</div>
 					</div>
-					<div class="col-md-4 pl-0">
+					<div class="col-md-4 p-0">
 						<?php if($testi['timage']['url']) { ?>
 							<div class="tphoto without_icon"><img src="<?php echo esc_url($testi['timage']['url']); ?>" alt="<?php echo esc_attr($testi['tname']); ?>"></div>
 						<?php } ?>

@@ -106,30 +106,30 @@ class Skinetic_Testimonials2 extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"There’s something unique about the way {Company Name} approaches their work — a perfect blend of professionalism, care, and calm. It’s rare to find such a balance."', 'skinetic' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
-						'tname'	  => 'Oliver Simson',
-						'tjob'	  => 'Developer'
+						'tname'	  => 'Emily Simson',
+						'tjob'	  => 'Customer'
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"Working with {Company Name} has been a truly enriching experience. Their calm, confident presence and attention to detail made everything feel effortless. I left every interaction feeling inspired and at ease."', 'skinetic' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
-						'tname'	  => 'Mary Grey',
-						'tjob'	  => 'Manager'
+						'tname'	  => 'Lena Grey',
+						'tjob'	  => 'Customer'
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'skinetic' ),
+		             	'tcontent' => __( '"I didn’t just receive a service — I felt understood. {Company Name} creates an experience that’s thoughtful, elegant, and profoundly human."', 'skinetic' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
-						'tname'	  => 'Samanta Fox',
-						'tjob'	  => 'Designer'
+						'tname'	  => 'Sarah Fox',
+						'tjob'	  => 'Customer'
 		 
 		            ]
 		            

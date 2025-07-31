@@ -892,12 +892,12 @@ td {
 }
 
 .gradient_left_right:before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 700px;
-  height: 700px;
+  content: '' !important;
+  position: absolute !important;
+  top: 10% !important;
+  left: 10% !important;
+  width: 700px !important;
+  height: 700px !important;
   -webkit-filter: blur(80px);
   filter: blur(80px);
   background: radial-gradient(circle at 50% 50%, #8f4d5d, #444bf700);

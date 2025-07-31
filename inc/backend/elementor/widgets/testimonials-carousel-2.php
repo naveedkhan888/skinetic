@@ -430,7 +430,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .xp-testimonials h4' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .xp-testimonials .heading_testiii' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -441,7 +441,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .xp-testimonials h4' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .xp-testimonials .heading_testiii' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -450,7 +450,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'ttitlenew_typography',
-				'selector' => '{{WRAPPER}} .xp-testimonials h4',
+				'selector' => '{{WRAPPER}} .xp-testimonials .heading_testiii',
 			]
 		);
 
@@ -706,7 +706,7 @@ class Skinetic_Testimonials2 extends Widget_Base{
 					<div class="col-md-8 p-0">
 						<div class="boxx_inner">
 							<div class="tphoto"></div>
-								<?php if($testi['ttitlenew']) { echo '<h4>' .$testi['ttitlenew']. '</h4>'; } ?>
+								<?php if($testi['ttitlenew']) { echo '<h4 class="heading_testiii">' .$testi['ttitlenew']. '</h4>'; } ?>
 								<?php if($testi['tcontent']) { echo '<div class="ttext">' .$testi['tcontent']. '</div>'; } ?>
 								<div class="t-head">
 									<div class="tinfo">

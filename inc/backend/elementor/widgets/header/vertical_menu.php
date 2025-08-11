@@ -136,6 +136,29 @@ class Skinetic_Vertical_Menu extends Widget_Base{
 
 		);
 
+		// Background Color for Vertical Menu item
+
+		$this->add_control(
+
+			'vertical_menu_itemm_color',
+
+			[
+
+				'label' => __( 'Background Item Color', 'skinetic' ),
+
+				'type' => Controls_Manager::COLOR,
+
+				'selectors' => [
+
+					'{{WRAPPER}} .vertical-services-menu li' => 'background-color: {{VALUE}};',
+
+				],
+
+			]
+
+		);
+
+
 		// Background Color for Vertical Menu
 
 		$this->add_control(

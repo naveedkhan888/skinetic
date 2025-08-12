@@ -188,6 +188,10 @@ if(!function_exists('skinetic_color_scheme')){
 			/*Background Image*/
 			.author-widget_wrapper:before{ background-image: linear-gradient(230deg, '.skinetic_get_option('main_color').' -150%, #fff 80%); }
 
+			/*Background Gradient*/
+			.gradient_left_right:before, 
+			.gradient_left_right:after{ background: radial-gradient(circle at 100% 100%, '.skinetic_get_option('main_color').', transparent);  }
+
 			/*Border Color*/
 			.xptf-btn.xptf-btn-border,
 			.features-service-wrapper .btn-details:hover,

@@ -285,7 +285,9 @@ if(!function_exists('skinetic_color_scheme')){
 			}
 
 			.elementor-widget-icon.elementor-view-framed .elementor-icon, 
-			.elementor-widget-icon.elementor-view-default .elementor-icon, 
+			.elementor-widget-icon.elementor-view-default .elementor-icon,
+			.icon_theme.elementor-widget-icon.elementor-view-framed .elementor-icon, 
+			.icon_theme.elementor-widget-icon.elementor-view-default .elementor-icon,  
 			.icon_newmain.elementor-widget-icon.elementor-view-framed .elementor-icon, 
 			.icon_newmain.elementor-widget-icon.elementor-view-default .elementor-icon{
 				color:'.skinetic_get_option('main_color').';

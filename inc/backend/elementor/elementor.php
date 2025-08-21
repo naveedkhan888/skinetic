@@ -255,4 +255,4 @@ class Skinetic_Elementor {
 }
 
 // Initialize the Awaiken_Elementor class
-Awaiken_Elementor::instance();
+Skinetic_Elementor::instance();

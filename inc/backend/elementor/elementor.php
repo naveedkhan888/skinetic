@@ -149,3 +149,108 @@ add_action('elementor/element/container/section_layout/after_section_end', funct
 if ( did_action( 'elementor/loaded' ) ) {
     require get_template_directory() . '/inc/backend/elementor/column.php';
 }
+
+
+
+
+
+
+
+
+
+// Skinetic Elementor Kit Configuration Class
+namespace Skinetic\Compatibility;
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+
+if( !defined( 'ELEMENTOR_VERSION' ) ) {
+    return;
+}
+
+class Skinetic_Elementor { 
+    private static $instance;
+
+    public static function instance() {
+        if ( is_null( self::$instance ) ) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+    
+    public function __construct() {
+        // Initialize the default kit update
+        add_action( 'elementor/init', array( $this, 'update_default_elementor_kit' ) );
+    }
+    
+    public function update_default_elementor_kit() {
+
+        add_option( 'default_skinetic_kit', 0 );
+        if ( get_option( 'default_skinetic_kit' ) == 0 ) {
+
+            $kit = \Elementor\Plugin::$instance->kits_manager->get_active_kit();
+
+            if ( ! $kit->get_id() ) {
+                return;
+            }
+
+            $kit->update_settings( [
+                'system_colors' => array(
+                     0 => array(
+                        '_id' => 'primary',
+                        'title' => 'Primary',
+                        'color' => '',
+                     ),
+                     1 => array(
+                        '_id' => 'secondary',
+                        'title' => 'Secondary',
+                        'color' => '',
+                     ),
+                     2 => array(
+                        '_id' => 'text',
+                        'title' => 'Text',
+                        'color' => '',
+                     ),
+                     3 => array(
+                        '_id' => 'accent',
+                        'title' => 'Accent',
+                        'color' => '',
+                     ),
+                     4 => array(
+                        '_id' => 'accentsecondary',
+                        'title' => 'Accent Secondary',
+                        'color' => '',
+                     ),
+                     5 => array(
+                        '_id' => 'white',
+                        'title' => 'White Color',
+                        'color' => '',
+                     ),
+                     6 => array(
+                        '_id' => 'black',
+                        'title' => 'Black Color',
+                        'color' => '',
+                     ),
+                     7 => array(
+                        '_id' => 'divider',
+                        'title' => 'Divider Color',
+                        'color' => '',
+                     ),
+                     8 => array(
+                        '_id' => 'darkdivider',
+                        'title' => 'Dark Divider Color',
+                        'color' => '',
+                     ),
+                ),
+            ] );
+
+            \Elementor\Plugin::instance()->files_manager->clear_cache();
+            update_option( 'default_skinetic_kit', 1 );
+        }
+    }
+            
+}
+
+// Initialize the Awaiken_Elementor class
+Awaiken_Elementor::instance();

@@ -255,13 +255,6 @@ if ( class_exists( 'woocommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce/woocommerce.php';
 }
 
-/**
- * For After Import.
- */
-require_once get_template_directory() . '/inc/post-import-actions.php';
-
-update_option('my_theme_after_import_done', 'yes');
-
 
 function skinetic_register_block_styles() {
     // Add custom styles to core paragraph block

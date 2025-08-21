@@ -1,5 +1,8 @@
 <?php
 
+// Skinetic Elementor Kit Configuration Class
+namespace Skinetic\Compatibility;
+
 // Load the theme's custom Widgets so that they appear in the Elementor element panel.
 add_action( 'elementor/widgets/register', 'skinetic_register_elementor_widgets' );
 function skinetic_register_elementor_widgets() {
@@ -158,8 +161,7 @@ if ( did_action( 'elementor/loaded' ) ) {
 
 
 
-// Skinetic Elementor Kit Configuration Class
-namespace Skinetic\Compatibility;
+
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.

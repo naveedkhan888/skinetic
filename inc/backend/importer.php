@@ -75,35 +75,3 @@ function skinetic_importer() {
 }
 
 add_filter( 'soo_demo_packages', 'skinetic_importer', 30 );
-
-
-
-
-function skinetic_after_import_setup() {
-	
-	
-	
-	  // Get elementor Kit.
-	  $kit_page = get_posts(
-		[
-		  'post_type'              => 'elementor_library',
-		  'title'                  => 'Skinetic - Default Kit',
-		  'post_status'            => 'all',
-		  'numberposts'            => 1,
-		  'update_post_term_cache' => false,
-		  'update_post_meta_cache' => false,
-		]
-	  );
-	
-	 if ( ! empty( $kit_page ) ) {
-		update_option( 'elementor_active_kit', $kit_page[0]->ID );
-	  }
-
-	// Check if Elementor is active
-    if ( did_action( 'elementor/loaded' ) ) {
-        // Regenerate CSS files
-        \Elementor\Plugin::instance()->files_manager->clear_cache();
-    }
-
-}
-add_action( 'import_end', 'skinetic_after_import_setup' );
